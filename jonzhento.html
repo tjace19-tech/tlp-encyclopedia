@@ -128,7 +128,7 @@ body::after {
 .house-crown svg { width: 100%; height: 100%; filter: drop-shadow(0 2px 8px rgba(201,164,73,0.45)); }
 .house-line { font-family: var(--serif-display); font-size: 11px; letter-spacing: 0.42em; color: var(--gold); text-transform: uppercase; font-weight: 500; }
 
-.given-name { font-family: var(--serif-display); font-size: clamp(42px, 6.5vw, 78px); font-weight: 700; letter-spacing: 0.04em; color: var(--cream); line-height: 0.95; margin-bottom: 6px; text-transform: uppercase; }
+.given-name { font-family: var(--serif-display); font-size: clamp(36px, 5vw, 64px); font-weight: 700; letter-spacing: 0.02em; color: var(--cream); line-height: 0.95; margin-bottom: 6px; text-transform: uppercase; }
 .house-name { font-family: var(--serif-italic); font-size: clamp(26px, 4vw, 42px); font-weight: 400; font-style: italic; color: var(--gold); letter-spacing: 0.04em; margin-bottom: 14px; }
 
 .epithet { display: inline-block; font-family: var(--serif-display); font-size: 12px; letter-spacing: 0.4em; color: var(--gold-bright); text-transform: uppercase; padding: 8px 0; border-top: 1px solid rgba(201,164,73,0.5); border-bottom: 1px solid rgba(201,164,73,0.5); margin: 16px 0 28px; font-weight: 500; }
@@ -280,7 +280,7 @@ body::after {
         </div>
         <div class="given-name">Jonzhento</div>
         <div class="house-name">Locsird</div>
-        <div class="epithet">King of Gemlyria · The Youngest King in Centuries</div>
+        <div class="epithet">King of Gemlyria · First King of the Unified Kingdom</div>
         <div class="titles">
           <span class="title-pill primary">King</span>
           <span class="title-pill">Apex</span>
@@ -301,7 +301,7 @@ body::after {
       <div class="vital"><div class="vital-label">Age</div><div class="vital-value large">246</div></div>
       <div class="vital"><div class="vital-label">House</div><div class="vital-value">Locsird</div></div>
       <div class="vital"><div class="vital-label">Title</div><div class="vital-value">King of Gemlyria</div></div>
-      <div class="vital"><div class="vital-label">Spouse</div><div class="vital-value">Sonya-Lee Toraiyo</div></div>
+      <div class="vital"><div class="vital-label">Spouse</div><div class="vital-value"><a href="sonya-lee.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Sonya-Lee Toraiyo</a></div></div>
     </div>
 
     <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
@@ -312,7 +312,7 @@ body::after {
         <span class="section-num">I.</span>
         <div class="section-title">Personality & Character</div>
       </div>
-      <p class="body-text">Gentle by default. Strategic beneath it. Jonzhento operates with the quiet precision of a man who has held enormous power for a long time and learned not to show it at every moment. He is deeply protective of his children — all of them, including the three who carry Sonya-Lee's name. He is the youngest king in centuries, and the weight of that distinction has never left him.</p>
+      <p class="body-text">Gentle by default. Strategic beneath it. Jonzhento operates with the quiet precision of a man who has held enormous power for a long time and learned not to show it at every moment. He is deeply protective of his children — all of them, including the three who carry Sonya-Lee's name. He is the first king of the newly unified kingdom of Gemlyria, and the weight of that distinction has never left him.</p>
       <p class="body-text">He drives the bulk of the convoy to Aurora himself. He needs something to do with his hands. He cannot sit still with nothing to control while moving toward his son — the son lost for fourteen years, the son who is also the Rebirth. The driving is not practical. It is the only available form of forward motion that does not require him to feel everything all at once.</p>
       <p class="body-text">He has never asked Sonya-Lee about the marks. He understands the sanctity of the Rendering. <em>The not-asking is its own form of love.</em></p>
     </section>
@@ -430,5 +430,29 @@ body::after {
 
   </div>
 </div>
+<div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(10,5,18,0.95); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
+  <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(201,164,73,0.45); box-shadow:0 0 0 1px rgba(201,164,73,0.2), 0 40px 100px -20px rgba(0,0,0,0.9);">
+</div>
+<script>
+  (function() {
+    var overlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img.id === 'lightbox-img') return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        e.preventDefault();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.style.display = 'flex';
+      });
+    });
+    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.style.display = 'none';
+    });
+  })();
+</script>
+
 </body>
 </html>

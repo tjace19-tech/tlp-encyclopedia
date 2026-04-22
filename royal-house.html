@@ -290,7 +290,7 @@ body::after {
   font-family: var(--serif-display);
   font-size: clamp(38px, 5.5vw, 64px);
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   color: var(--cream);
   line-height: 0.95;
   text-transform: uppercase;
@@ -618,7 +618,7 @@ body::after {
         </svg>
       </div>
       <div class="sidebar-house">Locsird · Toraiyo</div>
-      <div class="sidebar-seat">The Royal House · Gemstone Fortress</div>
+      <div class="sidebar-seat">The Royal House</div>
     </div>
 
     <div class="sidebar-members">
@@ -738,7 +738,7 @@ body::after {
               <circle cx="35" cy="35" r="32" stroke="rgba(201,164,73,0.12)" stroke-width="0.8"/>
             </svg>
           </div>
-          <div class="house-eyebrow">Royal House · Gemstone Fortress · Seat of Gemlyria</div>
+          <div class="house-eyebrow">Royal House · Gemstone Fortress · Ancient Seat of the Unified Kingdom</div>
         </div>
 
         <div class="house-title">Locsird</div>
@@ -755,7 +755,7 @@ body::after {
         <div class="fortress-frame">
           <img src="Gemstone_Fortress_Full_View.jpg" alt="Gemstone Fortress">
         </div>
-        <div class="fortress-caption">Gemstone Fortress · Seat of the Royal House</div>
+        <div class="fortress-caption">Gemstone Fortress · Ancient Seat of the Kingdom</div>
       </div>
     </div>
 
@@ -770,7 +770,7 @@ body::after {
         <div class="vital-value">The Locsird Star</div>
       </div>
       <div class="vital">
-        <div class="vital-label">Seat</div>
+        <div class="vital-label">Ancient Seat</div>
         <div class="vital-value">Gemstone Fortress</div>
       </div>
       <div class="vital">
@@ -802,7 +802,7 @@ body::after {
           <div class="family-card-body">
             <div class="family-card-name">Jonzhento Locsird</div>
             <div class="family-card-role">King of Gemlyria</div>
-            <div class="family-card-age">Age 246 · Husband of Sonya-Lee</div>
+            <div class="family-card-age">First King of the Unified Kingdom · Husband of Sonya-Lee</div>
           </div>
         </a>
 
@@ -853,7 +853,7 @@ body::after {
 
         <a href="ayravelle.html" class="family-card">
           <div class="family-card-img">
-            <img src="Ayravelle_Atheltic.JPEG" alt="Ayravelle Locsird">
+            <img src="Ayravelle_Battle.PNG" alt="Ayravelle Locsird">
           </div>
           <div class="family-card-body">
             <div class="family-card-name">Ayravelle Locsird</div>
@@ -864,7 +864,7 @@ body::after {
 
         <a href="samantha-lilly.html" class="family-card">
           <div class="family-card-img">
-            <img src="SamanthaLilly_Formal.JPG" alt="Samantha-Lilly Toraiyo">
+            <img src="SamanthaLilly_Battle.PNG" alt="Samantha-Lilly Toraiyo">
           </div>
           <div class="family-card-body">
             <div class="family-card-name">Samantha-Lilly Toraiyo</div>
@@ -928,13 +928,37 @@ body::after {
         </svg>
       </div>
       <div class="footer-text">
-        <em>"The King chose. He chose knowing what stories he had heard. He continues to choose."</em>
+        <em>"In the beginning there was imbalance, by the end, there will be balance."</em>
         <span class="meta">Character Encyclopedia · Volume II · Royal House Locsird • Toraiyo · Chronicle One: Rebirth</span>
       </div>
     </footer>
 
   </div>
 </div>
+
+<div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(10,5,18,0.95); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
+  <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(201,164,73,0.45); box-shadow:0 0 0 1px rgba(201,164,73,0.2), 0 40px 100px -20px rgba(0,0,0,0.9);">
+</div>
+<script>
+  (function() {
+    var overlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img.id === 'lightbox-img') return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        e.preventDefault();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.style.display = 'flex';
+      });
+    });
+    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.style.display = 'none';
+    });
+  })();
+</script>
 
 </body>
 </html>
