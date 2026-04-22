@@ -80,7 +80,8 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .footer-text{display:flex;flex-direction:column;gap:8px;align-items:center;}
 .footer-text em{font-family:var(--serif-italic);font-style:italic;font-size:17px;color:var(--cream-dim);max-width:520px;text-align:center;line-height:1.5;}
 .footer-text .meta{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;margin-top:4px;}
-@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}}
+.mobile-back{display:none;}
+@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}.mobile-back{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(201,164,73,.18);transition:color .2s;}.mobile-back:hover{color:var(--gold);}.chrome{padding-top:14px;}}
 </style>
 </head>
 <body>
@@ -107,6 +108,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   </nav>
 
   <div class="main">
+    <a href="royal-house.html" class="mobile-back">← House Locsird · Toraiyo</a>
     <div class="chrome">
       <div class="chrome-title">The Lost Prince — Character Encyclopedia</div>
       <div class="chrome-nav"><a href="index.html">Houses</a><a href="royal-house.html">Royal House</a><span>Volume II</span></div>

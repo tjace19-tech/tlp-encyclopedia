@@ -594,12 +594,15 @@ body::after {
   margin-top: 4px;
 }
 
+.mobile-back { display: none; }
 @media (max-width: 900px) {
   .sidebar { display: none; }
   .main { padding: 0 20px 60px; }
   .house-hero { grid-template-columns: 1fr; gap: 30px; }
   .vitals { grid-template-columns: repeat(2, 1fr); }
   .family-grid { grid-template-columns: repeat(2, 1fr); }
+  .mobile-back { display: block; font-family: var(--serif-display); font-size: 10px; letter-spacing: .3em; color: var(--gold-deep); text-transform: uppercase; text-decoration: none; padding: 14px 0; border-bottom: 1px solid rgba(201,164,73,.18); transition: color .2s; }
+  .mobile-back:hover { color: var(--gold); }
 }
 </style>
 </head>
@@ -717,6 +720,7 @@ body::after {
 
   <!-- MAIN -->
   <div class="main">
+    <a href="index.html" class="mobile-back">← Encyclopedia Home</a>
 
     <div class="chrome">
       <div class="chrome-title">The Lost Prince — Character Encyclopedia</div>
