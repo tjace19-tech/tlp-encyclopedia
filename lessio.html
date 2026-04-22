@@ -38,8 +38,8 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .house-mark{display:inline-flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:28px;}
 .house-crown{width:50px;height:50px;}.house-crown svg{width:100%;height:100%;filter:drop-shadow(0 2px 8px rgba(201,164,73,.45));}
 .house-line{font-family:var(--serif-display);font-size:11px;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;font-weight:500;}
-.given-name{font-family:var(--serif-display);font-size:clamp(42px,6.5vw,78px);font-weight:700;letter-spacing:.04em;color:var(--cream);line-height:.95;margin-bottom:6px;text-transform:uppercase;}
-.house-name{font-family:var(--serif-italic);font-size:clamp(26px,4vw,42px);font-weight:400;font-style:italic;color:var(--gold);letter-spacing:.04em;margin-bottom:14px;}
+.given-name { font-family: var(--serif-display); font-size: clamp(36px, 5vw, 64px); font-weight: 700; letter-spacing: 0.02em; color: var(--cream); line-height: 0.95; margin-bottom: 6px; text-transform: uppercase; }
+.house-name{font-family:var(--serif-italic);font-size:clamp(24px,3.5vw,38px);font-weight:400;font-style:italic;color:var(--gold);letter-spacing:.04em;margin-bottom:14px;}
 .epithet{display:inline-block;font-family:var(--serif-display);font-size:12px;letter-spacing:.4em;color:var(--gold-bright);text-transform:uppercase;padding:8px 0;border-top:1px solid rgba(201,164,73,.5);border-bottom:1px solid rgba(201,164,73,.5);margin:16px 0 28px;font-weight:500;}
 .titles{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
 .title-pill{font-family:var(--serif-display);font-size:9.5px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;padding:7px 14px;border:1px solid rgba(201,164,73,.4);background:rgba(74,29,110,.12);font-weight:500;}
@@ -64,21 +64,12 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .section-sub{font-family:var(--serif-italic);font-style:italic;font-size:15px;color:var(--cream-dim);margin-left:auto;}
 .body-text{font-family:var(--serif-body);font-size:17px;line-height:1.75;color:var(--cream-dim);margin-bottom:20px;}
 .body-text em{font-family:var(--serif-italic);font-style:italic;color:var(--cream);}
-/* Power ladder block */
-.power-ladder{border:1px solid rgba(201,164,73,.35);background:linear-gradient(135deg,rgba(74,29,110,.12) 0%,rgba(10,5,18,.5) 100%);padding:32px 30px;margin:30px 0;position:relative;}
-.power-ladder::before{content:'THE THREE-TIER SCALE';font-family:var(--serif-display);font-size:8px;letter-spacing:.45em;color:var(--gold);text-transform:uppercase;position:absolute;top:-9px;left:24px;background:var(--ink);padding:0 10px;}
-.ladder-row{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid rgba(201,164,73,.12);align-items:start;}
-.ladder-row:last-child{border-bottom:none;}
-.ladder-tier{font-family:var(--serif-display);font-size:11px;letter-spacing:.18em;color:var(--gold-bright);text-transform:uppercase;font-weight:600;padding-top:2px;}
-.ladder-tier a{color:var(--gold-bright);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(201,164,73,.5);transition:color .2s,text-decoration-color .2s;}
-.ladder-tier a:hover{color:var(--cream);text-decoration-color:var(--gold);}
-.ladder-desc{font-family:var(--serif-body);font-size:15px;line-height:1.65;color:var(--cream-dim);}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:20px;margin-bottom:20px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin-bottom:20px;}
 .gallery-item{border:1px solid rgba(201,164,73,.3);background:var(--ink-soft);padding:8px;}
 .gallery-item img{width:100%;display:block;filter:contrast(1.04) brightness(.96);}
 .gallery-caption{margin-top:10px;}
 .gallery-caption .label{font-family:var(--serif-display);font-size:9px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:4px;}
-.gallery-caption .desc{font-family:var(--serif-italic);font-style:italic;font-size:12px;color:var(--cream-dim);line-height:1.4;}
+.gallery-caption .desc{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);line-height:1.4;}
 .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
 .rel-card{border:1px solid rgba(201,164,73,.22);background:linear-gradient(135deg,rgba(74,29,110,.1) 0%,rgba(26,7,41,.35) 100%);padding:24px 22px;}
 .rel-name{font-family:var(--serif-display);font-size:13px;letter-spacing:.18em;color:var(--cream);text-transform:uppercase;font-weight:600;margin-bottom:4px;}
@@ -89,7 +80,25 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .footer-text{display:flex;flex-direction:column;gap:8px;align-items:center;}
 .footer-text em{font-family:var(--serif-italic);font-style:italic;font-size:17px;color:var(--cream-dim);max-width:520px;text-align:center;line-height:1.5;}
 .footer-text .meta{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;margin-top:4px;}
-@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}.ladder-row{grid-template-columns:1fr;gap:8px;}}
+@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}}
+/* Lessio-specific — attr-list for Appearance section */
+.attr-list { display: grid; grid-template-columns: 110px 1fr; gap: 14px 24px; margin-top: 8px; }
+.attr-key { font-family: var(--serif-display); font-size: 10px; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; padding-top: 4px; font-weight: 500; }
+.attr-val { font-family: var(--serif-body); color: var(--cream); font-size: 16px; line-height: 1.6; }
+.attr-val em { font-family: var(--serif-italic); color: var(--cream-dim); font-style: italic; }
+/* Lessio-specific — power ladder */
+.ladder { margin-top: 32px; border-left: 2px solid var(--gold); padding-left: 0; }
+.tier { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 22px 0 22px 28px; border-bottom: 1px solid rgba(201,164,73,0.18); position: relative; }
+.tier:last-child { border-bottom: none; }
+.tier::before { content: ''; position: absolute; left: -7px; top: 32px; width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); }
+.tier-num { font-family: var(--serif-display); font-size: 36px; font-weight: 700; color: var(--gold-bright); line-height: 1; }
+.tier-name { font-family: var(--serif-display); font-size: 16px; letter-spacing: 0.2em; color: var(--cream); text-transform: uppercase; font-weight: 500; margin-bottom: 8px; }
+.tier-desc { font-family: var(--serif-body); font-size: 15.5px; color: var(--cream-dim); line-height: 1.6; }
+.tier-desc em { font-family: var(--serif-italic); font-style: italic; color: var(--cream); }
+/* Lessio-specific — pullquote (section V) */
+.pullquote { margin: 36px 0 0; padding: 22px 0; font-family: var(--serif-display); font-size: 13.5px; letter-spacing: 0.18em; color: var(--gold-bright); text-transform: uppercase; font-weight: 500; border-top: 1px solid rgba(201,164,73,0.3); border-bottom: 1px solid rgba(201,164,73,0.3); text-align: center; }
+/* Lessio-specific — rebirth title pill */
+.title-pill.rebirth { border-color: var(--gold-bright); background: linear-gradient(135deg, rgba(201,164,73,0.15), rgba(232,200,115,0.08)); color: var(--gold-bright); }
 </style>
 </head>
 <body>
@@ -129,14 +138,13 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         </div>
         <div class="given-name">Lessio</div>
         <div class="house-name">Locsird</div>
-        <div class="epithet">The Rebirth · The Prince · The Vessel</div>
+        <div class="epithet">★ The Rebirth</div>
         <div class="titles">
-          <span class="title-pill primary">The Rebirth</span>
-          <span class="title-pill">Age 16</span>
-          <span class="title-pill">No True Power Cap</span>
-          <span class="title-pill">Future: Holly Galmir</span>
+          <span class="title-pill primary">Prince of Gemlyria</span>
+          <span class="title-pill">The Lost Prince</span>
+          <span class="title-pill rebirth">The Rebirth</span>
         </div>
-        <div class="epigraph">The Rebirth is not a title. It is a literal, precise description of a cosmic condition occurring through him. He is the vessel, not the condition itself. He does not know this. He does not know any of what he is.</div>
+        <div class="epigraph">The kingdom had slowly, painfully learned to hold his absence as a permanent condition — his name shifting over time from a missing child to a symbol to something closer to myth. And here he was. In the sand. Bleeding. His eyes throwing white light into the fog.</div>
       </div>
       <div>
         <div class="hero-portrait">
@@ -147,64 +155,112 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 
     <div class="vitals">
       <div class="vital"><div class="vital-label">Age</div><div class="vital-value large">16</div></div>
-      <div class="vital"><div class="vital-label">Eyes</div><div class="vital-value">Very Light Grey · Nearly White · Glow Under Power</div></div>
-      <div class="vital"><div class="vital-label">Power Cap</div><div class="vital-value">None · Unknown to Everyone Including Himself</div></div>
-      <div class="vital"><div class="vital-label">Missing Years</div><div class="vital-value">14 years · No memory · He died</div></div>
+      <div class="vital"><div class="vital-label">House</div><div class="vital-value">Locsird</div></div>
+      <div class="vital"><div class="vital-label">Status</div><div class="vital-value">The Rebirth</div></div>
+      <div class="vital"><div class="vital-label">Power Cap</div><div class="vital-value">None</div></div>
     </div>
 
     <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
 
     <section>
-      <div class="section-head"><span class="section-num">I.</span><div class="section-title">Personality · Chronicle One Baseline</div></div>
-      <p class="body-text">Trauma-laden. Introspective. Kind-hearted. He begins very shy and timid — not from weakness of character but from disorientation. He was dropped into a fully-formed life sixteen years in the making with none of the formation that should have preceded it. Quiet, watchful, self-diminishing by default. He second-guesses himself constantly. He does not know what he is supposed to feel about anything — because everything he encounters in this family is a reference he has no memory to anchor it to.</p>
-      <p class="body-text">He uses physical details as grounding anchors. He does not sleep well. He has an instinctive somatic fear of Sapphire that is sourceless and pre-cognitive — he cannot trace it. He does not know she exists. The fear is already there.</p>
-      <p class="body-text"><em>As his foundation builds across Chronicles One and Two, the instinct toward Sapphire transmutes. Dread becomes cold compounding rage. This arc runs beneath the entire series.</em></p>
+      <div class="section-head"><span class="section-num">I.</span><div class="section-title">Standing</div></div>
+      <p class="body-text"><em>The youngest child of King Jonzhento Locsird and Queen Sonya-Lee Toraiyo. Taken on the morning of his second birthday and presumed dead before his third. Returned at sixteen, wounded on a beach in Aurora, with no memory of the fourteen years between.</em></p>
+      <p class="body-text">The kingdom had been quietly, carefully learning to grieve for him for a decade and a half — his name shifting from a missing child to a symbol to something closer to myth. Every high family had silently adjusted its political calculations to a future without him. And then he came back.</p>
+      <p class="body-text">He is the cosmic condition occurring through this body. Not the condition itself — the vessel. <em>The Rebirth name is literally accurate.</em></p>
     </section>
 
     <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
 
     <section>
-      <div class="section-head"><span class="section-num">II.</span><div class="section-title">Power Architecture</div></div>
-      <p class="body-text">His only limits are those he places on himself. He genuinely believes his power has a ceiling. Every time he breaches a boundary, he resets — carries each new ceiling with the same quiet conviction he carried the last one. He never suspects the pattern because from inside the experience, each breakthrough feels final.</p>
+      <div class="section-head"><span class="section-num">II.</span><div class="section-title">Appearance</div></div>
+      <div class="attr-list">
+        <div class="attr-key">Hair</div>
+        <div class="attr-val">Dark, cropped close to the scalp.</div>
+        <div class="attr-key">Eyes</div>
+        <div class="attr-val">Pale almost to the point of colourlessness — light grey, nearly white. <em>Glow white under power, distress, or pain.</em></div>
+        <div class="attr-key">Build</div>
+        <div class="attr-val">Slight at sixteen — still growing into himself. Sharp-featured, clean-lined, long in the jaw. <em>The kind of face that carries its structure without softness.</em></div>
+        <div class="attr-key">Bearing</div>
+        <div class="attr-val">Quiet. Watchful. Self-diminishing by default. Even barely conscious there is something in him that does not read as young in the way that most sixteen-year-olds read as young.</div>
+        <div class="attr-key">Voice</div>
+        <div class="attr-val">Soft. Honest. Sparing with words. When he speaks, people listen because he so rarely does.</div>
+      </div>
+    </section>
 
-      <div class="power-ladder">
-        <div class="ladder-row">
-          <div class="ladder-tier">I. Apex Power</div>
-          <div class="ladder-desc">World-shaking. The upper limit of known human capability. Sonya-Lee shattering the Astravar curtain wall is the benchmark. The most feared beings in Gemlyria.</div>
+    <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">III.</span><div class="section-title">Personality</div></div>
+      <p class="body-text">Trauma-laden, introspective, kind-hearted. Dropped into a fully-formed life sixteen years in the making with none of the formation that should have preceded it. He second-guesses himself constantly — not from weakness of character but from disorientation. He minimizes himself by reflex. He apologizes for occupying space.</p>
+      <p class="body-text">Underneath all of this is a foundation no one — not even Lessio — yet recognizes. <em>His kindness, his introspection, his gentleness</em> are not coping mechanisms. They are the architecture of who he actually is. The wisdom precedes the knowledge. He is practising the right relationship with his power long before he understands what that power actually is.</p>
+      <p class="body-text">The shyness will fade as the foundation surfaces. The kindness will not.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">IV.</span><div class="section-title">The Three-Tier Power Ladder</div></div>
+      <p class="body-text">The series establishes a progressive power scale that the reader experiences in stages.</p>
+      <div class="ladder">
+        <div class="tier">
+          <div class="tier-num">I</div>
+          <div>
+            <div class="tier-name">Apex Power</div>
+            <div class="tier-desc">World-shaking. The upper limit of known human capability. <em>Sonya-Lee shattering the Astravar curtain wall</em> is the benchmark. The most feared beings in Gemlyria.</div>
+          </div>
         </div>
-        <div class="ladder-row">
-          <div class="ladder-tier"><a href="thalassyr.html">II. The Thalassyr ↗</a></div>
-          <div class="ladder-desc">Renders Apex power irrelevant. The Royal Navy's standing doctrine is not "deploy your strongest Apex" — it is flee. The ceiling of the known world.</div>
+        <div class="tier">
+          <div class="tier-num">II</div>
+          <div>
+            <div class="tier-name">Thalassyr</div>
+            <div class="tier-desc">Renders Apex power irrelevant. The Royal Navy's standing doctrine is not <em>deploy your strongest Apex</em> — it is <em>flee.</em> The ceiling of the known world.</div>
+          </div>
         </div>
-        <div class="ladder-row">
-          <div class="ladder-tier">III. Lessio</div>
-          <div class="ladder-desc">Makes the Thalassyr look like a goldfish. He is 16 years old with power described as still unlocking gradually. There is no end to this ladder. He will not see that until the final revelation of the entire series.</div>
+        <div class="tier">
+          <div class="tier-num">III</div>
+          <div>
+            <div class="tier-name">Lessio</div>
+            <div class="tier-desc">Makes the Thalassyr look like a goldfish. <em>Sixteen years old. Power still unlocking gradually. No true ceiling — only the ones he places on himself.</em></div>
+          </div>
         </div>
       </div>
-
-      <p class="body-text">Involuntary breaches from containment being outpaced by exponential power growth. Eyes naturally very light grey, nearly white — they glow white under power, distress, or pain. First Apex peak at or around age 18. Arcane resonance confirmed exceptional by Dr. Rodney. An unnamed biological/arcane bond with Myrella Galmir operates below conscious thought on both sides — she is the only non-family member his body recognizes as familiar at an arcane-signature level.</p>
     </section>
 
     <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
 
     <section>
-      <div class="section-head"><span class="section-num">III.</span><div class="section-title">Reference Images</div></div>
+      <div class="section-head"><span class="section-num">V.</span><div class="section-title">The False Ceiling</div></div>
+      <p class="body-text">Lessio has no true power cap. Every time he breaches a boundary, he resets quietly: <em>okay, so that's what I'm capable of.</em> He carries each new ceiling with the same certainty he carried the last one. The pattern repeats across the entire series.</p>
+      <p class="body-text">The reader catches on before he does. Somewhere mid-series they notice — <em>he's done this before, the ceiling always moves.</em> They are then in the position of watching someone of literally limitless power live an entirely bounded life, holding back, believing he is being responsible.</p>
+      <p class="body-text">When he finally sees it — no more ceiling, just open sky in every direction, forever — his response is not peace, and it is not terror. It is <em>understanding.</em> A stoic calm that comes with deep knowledge of the world and of himself. The revelation does not create the calm. <em>The calm was already there.</em> The revelation only gives it a name.</p>
+      <div class="pullquote">The destination is not power. The destination is wisdom.</div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">VI.</span><div class="section-title">The Armor</div></div>
+      <p class="body-text"><em>White ceremonial-grade plate, every panel inscribed with intricate scrollwork. The horned helm. The polearm with its curved blade. What the kingdom had imagined for him for fourteen years, made real.</em></p>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="Lessio_Formal.JPG" alt="Lessio Formal">
-          <div class="gallery-caption"><div class="label">Formal</div><div class="desc">The prince. The disorientation is managed here. The self-diminishment is not visible from this distance.</div></div>
+          <img src="Lessio_Armor_Field_Clean.PNG" alt="Lessio in clean white armor on the field, helmet on">
+          <div class="gallery-caption"><div class="label">As It Was Meant to Be Seen</div><div class="desc">White plate, untouched. Helm on, polearm ready. The image the kingdom had been holding for him for fourteen years.</div></div>
         </div>
         <div class="gallery-item">
-          <img src="Lessio_Casual_1.PNG" alt="Lessio Casual">
-          <div class="gallery-caption"><div class="label">Casual</div><div class="desc">Quiet, watchful. The formation he should have had simply isn't there. He is piecing the world together in real time.</div></div>
+          <img src="Lessio_Armor_Leaning.PNG" alt="Lessio in armor leaning in the smithy">
+          <div class="gallery-caption"><div class="label">Between the Fights</div><div class="desc">Inside the smithy. Stone walls, forge glowing. This is where the armor lives. This is where it was made.</div></div>
         </div>
         <div class="gallery-item">
-          <img src="Rhyca_Lessio_Nightlife.PNG" alt="Lessio with Rhyca">
-          <div class="gallery-caption"><div class="label">With Rhyca · Nightlife</div><div class="desc">Her hand on his face. He lets her. This is one of the only moments he is fully at ease.</div></div>
+          <img src="Lessio_Armor_Sitting_Clean.PNG" alt="Lessio seated on rock, clean armor, exposed face">
+          <div class="gallery-caption"><div class="label">Before</div><div class="desc">Helm pushed back. The kid beneath the legend, sitting on a rock in a green field, polearm across his lap. Not yet bloodied.</div></div>
         </div>
         <div class="gallery-item">
-          <img src="Rhyzen_Battle.JPEG" alt="Lessio Full Armor">
-          <div class="gallery-caption"><div class="label">Battle Armor · Future Arc</div><div class="desc">What he becomes. The foundation built across Chronicles One and Two makes this version of him possible.</div></div>
+          <img src="Lessio_Armor_Sitting_Bloody.PNG" alt="Lessio seated on rock, bloody armor, exhausted">
+          <div class="gallery-caption"><div class="label">After</div><div class="desc">Same rock. Same posture. The white plate now red across chest and thigh. He looks at nothing. <em>The cost is on him before it is anywhere else.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Lessio_Armor_Field_Bloody.PNG" alt="Lessio in bloody armor on a rain-soaked field">
+          <div class="gallery-caption"><div class="label">After the Field</div><div class="desc">Rain-soaked. Scrollwork streaked with red. The legend, after.</div></div>
         </div>
       </div>
     </section>
@@ -212,47 +268,85 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
 
     <section>
-      <div class="section-head"><span class="section-num">IV.</span><div class="section-title">Relations</div></div>
+      <div class="section-head"><span class="section-num">VII.</span><div class="section-title">In Civilian Light</div></div>
+      <p class="body-text"><em>The prince out of armor. House colors at formal occasions, simple white and denim in private. The same person, smaller than what he can do.</em></p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Lessio_Formal.JPG" alt="Lessio formal — imperial purple velvet">
+          <div class="gallery-caption"><div class="label">Formal · Crown Colors</div><div class="desc">Imperial purple velvet blazer, gold bow tie, gold pocket square. The Royal House on his person.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Lessio_Casual_1.PNG" alt="Lessio casual — white shirt and jeans">
+          <div class="gallery-caption"><div class="label">Casual · The Person Beneath</div><div class="desc">White shirt, denim, leather belt. <em>Sixteen. Nothing on his shoulders but his shirt.</em></div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">◆ ◆ ◆</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">VIII.</span><div class="section-title">Relations</div></div>
+      <p class="body-text"><em>Family, bond, and the people who hold him.</em></p>
       <div class="rel-grid">
         <div class="rel-card">
-          <div class="rel-name">Jonzhento Locsird</div>
-          <div class="rel-role">Father · The Foundation Builder</div>
-          <div class="rel-text">A full, loving father-son relationship in every sense. Everything built between them across Chronicles One and Two exists so that what happens in the Enchanted Forest is unbearable. Jonzhento is the father Lessio never had the formation to expect and never stopped needing. He will not see the cost of this until it is already paid.</div>
+          <div class="rel-name"><a href="sonya-lee.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Sonya-Lee Toraiyo</a></div>
+          <div class="rel-role">Mother · The Bearer</div>
+          <div class="rel-text">She lost him at two. Got him back at sixteen. She holds him through his sleep breaches, the marks on her hands visible against his skin. He has caught only fragments of what she is. Nothing has prepared him for the marks. He is the only one in the family who could ever ask her — because the fourteen-year gap stripped him of the years that taught everyone else not to.</div>
         </div>
         <div class="rel-card">
-          <div class="rel-name">Sonya-Lee Toraiyo</div>
-          <div class="rel-role">Mother · The Doubled Grief</div>
-          <div class="rel-text">She lost him at two and got a different Lessio back. He processes her grief as information about what happened — not yet as felt personal loss. He does not have the formation to know what was taken from them. She does. They carry different versions of the same wound.</div>
-        </div>
-        <div class="rel-card">
-          <div class="rel-name">Ayravelle Locsird</div>
-          <div class="rel-role">Sister · Nighttime Anchor · Primary Caretaker</div>
-          <div class="rel-text">Her presence is both emotional support and functional necessity given his breach risk. She is the steady anchor — she holds both him and the Crown in the same hands. She does not drop either.</div>
-        </div>
-        <div class="rel-card">
-          <div class="rel-name">Samantha-Lilly Toraiyo</div>
-          <div class="rel-role">Sister · Strained · Protection Reflex</div>
-          <div class="rel-text">Sam is hard toward him. This is canon — not protective concern wearing a mask. The protection reflex still exists from his infancy, fast and decisive, and it coexists with the strain. Both are real and neither cancels the other.</div>
-        </div>
-        <div class="rel-card">
-          <div class="rel-name">Rhyca Locsird</div>
-          <div class="rel-role">Sister · Nighttime Warmth</div>
-          <div class="rel-text">The soft constant to Ayravelle's steady anchor. Her hand on his face, warm and easy, completely natural. He lets her. Together they form the complete support structure he needs to hold himself together in a life he had no preparation to enter.</div>
+          <div class="rel-name"><a href="jonzhento.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Jonzhento Locsird</a></div>
+          <div class="rel-role">Father · The King</div>
+          <div class="rel-text">Reverent toward his returned son. The first king of the newly unified kingdom of Gemlyria, deeply protective, gentle by default. Lost him for fourteen years and now navigates the impossible work of being a father to a child who is also the Rebirth.</div>
         </div>
         <div class="rel-card">
           <div class="rel-name">Myrella Galmir</div>
-          <div class="rel-role">Future Blood Mother · Arcane Bond</div>
-          <div class="rel-text">An unnamed biological/arcane bond operates below conscious thought on both sides. She is the only non-family member his body recognizes as familiar at an arcane-signature level. When he leaves Aurora, his peace degrades and his balance deteriorates. He does not consciously connect the cause to her absence.</div>
+          <div class="rel-role">The Bond · Blood Mother</div>
+          <div class="rel-text">The first person to find him on the beach in Aurora. Pulled by an unnamed compulsion in the middle of the night, barefoot, no weapon, sprinting into fog. They share an unnamed biological-arcane bond operating below conscious thought on both sides. She is the only non-family member his body recognizes as familiar at an arcane-signature level. <em>It will not be narratively explained for a long time.</em></div>
         </div>
         <div class="rel-card">
-          <div class="rel-name">Aurea-Lee Locsird</div>
-          <div class="rel-role">Sister · Future Peer · The Only Equal</div>
-          <div class="rel-text">Every other sibling takes an older sister or maternal approach with him. Aurea will not. They are four years apart — close enough in age to meet as peers. He will not feel handled by her. She will not mother him. This is the one sibling relationship that does not have an asymmetry built into it.</div>
+          <div class="rel-name"><a href="ayravelle.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Ayravelle Locsird</a></div>
+          <div class="rel-role">Heir · Steady Presence</div>
+          <div class="rel-text">Primary caretaker and steadying presence. Her nighttime presence is canonically both emotional support and functional necessity given his breach risk. She inherited the Heir role by circumstance — Emerald Locsird was meant to bear it. She holds her brother and her burden in the same hands.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="samantha-lilly.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Samantha-Lilly Toraiyo</a></div>
+          <div class="rel-role">Sister · Strained</div>
+          <div class="rel-text">Reflexively protective from his infancy — fast and decisive. The trauma of the abduction has left her strained with him in ways she has not resolved. The protection reflex still exists alongside the strain. Both are real.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="rhyca.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Rhyca Locsird</a></div>
+          <div class="rel-role">Sister · Warm Steady</div>
+          <div class="rel-text">One of the sisters Sonya-Lee Toraiyo leans on to sustain the warmth the Trials stripped from her parenting. Rhyca's patience and warmth are her baseline, not a mode she switches into — she is a primary nighttime presence in his care, and her steady, unbroken attention is what he does not have to ask for.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="mez-tah.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Mez-tah Toraiyo</a></div>
+          <div class="rel-role">Sister · Fiery Direct</div>
+          <div class="rel-text">Fiery and quick, of which Sonya-Lee Toraiyo is the natal source. Mez-tah meets him without softening the encounter — direct, unafraid to be blunt, unbothered by the weight of the Rebirth name. For a boy who is handled by almost everyone, being simply spoken to by a sister who does not manage him is its own relief.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="aurea-lee.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Aurea-Lee Locsird</a></div>
+          <div class="rel-role">Sister · "The Babies"</div>
+          <div class="rel-text">Four years apart — close enough in age to operate as peers rather than older/younger. Sonya-Lee Toraiyo grouped them together as <em>the babies.</em> Their bond will be unlike anything else in his life: neither managing him, neither mothering him. Just present, peer to peer.</div>
         </div>
         <div class="rel-card">
           <div class="rel-name">Holly Galmir</div>
-          <div class="rel-role">Future Wife · Arranged Marriage</div>
-          <div class="rel-text">The wedding follows the Blood Child arrangement. Holly views the marriage as a trophy — prestige and political victory, not emotional investment. Her touch is deliberate and strategic. He sits still throughout. Does not pull away. Does not wipe his cheek afterward. Whether he is being courteous or confused is an open question.</div>
+          <div class="rel-role">Future Wife · Arranged</div>
+          <div class="rel-text">Wants the marriage as a trophy — prestige and political victory. Her dominance instinct is directed at the marriage as territory and Myrella Galmir as rival, never at Lessio himself. Most alive in exactly the spaces that cost him most: public eye, events, gatherings, the full weight of visible royal life.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="sapphire.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Sapphire Toraiyo</a></div>
+          <div class="rel-role">Sister · The Abductor</div>
+          <div class="rel-text">The instinctive somatic fear is sourceless and pre-cognitive — he cannot trace it. As his foundation builds, the instinct toward her transmutes from dread to cold compounding rage. He does not know she exists at series open. He will learn of her, of Emerald Locsird's death, and of Ruby Toraiyo's existence simultaneously.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="emerald.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Emerald Locsird</a></div>
+          <div class="rel-role">Sister · Deceased</div>
+          <div class="rel-text">The second mother to him as an infant. The one he reached for, who carried him and settled him as simply her brother. He has no memory of her. His blankness on the subject is a source of quiet pain for those who remember — and may live in him as an unnameable absence whose origin he cannot identify.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="ruby.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Ruby Toraiyo</a></div>
+          <div class="rel-role">Sister · Estranged</div>
+          <div class="rel-text">Self-exiled to West Island after the catastrophic blowout with Sonya-Lee Toraiyo in the immediate aftermath of the abduction. He does not know she exists. Her arc involves quietly navigating tense family dynamics to rebuild proximity to him without drawing too much attention to herself.</div>
         </div>
       </div>
     </section>
@@ -260,11 +354,34 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <footer class="encyc-footer">
       <div class="footer-mark"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4 L20 14 L30 16 L20 18 L16 28 L12 18 L2 16 L12 14 Z" stroke="#c9a449" stroke-width="1" fill="rgba(201,164,73,0.15)"/></svg></div>
       <div class="footer-text">
-        <em>"He does not realise there is no cap until the very end of the series. The calm was already there. The revelation simply gives it a name."</em>
-        <span class="meta">Character Encyclopedia · Volume II · Royal House Locsird • Toraiyo · Last revised Session 22</span>
+        <em>"He is practising the right relationship with his power long before he understands what that power actually is."</em>
+        <span class="meta">Character Encyclopedia · Volume II · Royal House Locsird · Toraiyo</span>
       </div>
     </footer>
   </div>
 </div>
+<div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(10,5,18,0.95); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
+  <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(201,164,73,0.45); box-shadow:0 0 0 1px rgba(201,164,73,0.2), 0 40px 100px -20px rgba(0,0,0,0.9);">
+</div>
+<script>
+  (function() {
+    var overlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img.id === 'lightbox-img') return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        e.preventDefault();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.style.display = 'flex';
+      });
+    });
+    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.style.display = 'none';
+    });
+  })();
+</script>
 </body>
 </html>
