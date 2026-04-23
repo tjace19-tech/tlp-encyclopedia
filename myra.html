@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myra Galmir — The Lost Prince Character Encyclopedia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#6fa8dc;--sky-deep:#3b78b8;--sky-darker:#1f4a78;--silver:#cfd6dd;--silver-bright:#e8edf2;--silver-deep:#8a96a3;--platinum:#d8dde2;--platinum-bright:#f1f3f5;--cream:#f4ecdc;--cream-dim:#d9cdb4;--ink:#06080d;--ink-soft:#0d1626;--serif-display:'Cinzel',serif;--serif-body:'EB Garamond',serif;--serif-italic:'Cormorant Garamond',serif;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif-body);font-size:17px;line-height:1.7;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(111,168,220,.16) 0%,transparent 45%),radial-gradient(circle at 80% 70%,rgba(59,120,184,.20) 0%,transparent 50%),radial-gradient(circle at 50% 100%,rgba(31,74,120,.40) 0%,transparent 60%);pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.04 0 0 0 0 0.06 0 0 0 0 0.10 0 0 0 0.4 0'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.5'/></svg>");opacity:.5;pointer-events:none;z-index:1;mix-blend-mode:overlay;}
+.layout{position:relative;z-index:2;display:flex;min-height:100vh;}
+.sidebar{width:300px;flex-shrink:0;background:linear-gradient(180deg,rgba(13,22,38,.98) 0%,rgba(6,8,13,.98) 100%);border-right:1px solid rgba(207,214,221,.22);position:sticky;top:0;height:100vh;overflow-y:auto;padding:0 0 40px;scrollbar-width:thin;scrollbar-color:rgba(207,214,221,.3) transparent;}
+.sidebar::-webkit-scrollbar{width:4px;}.sidebar::-webkit-scrollbar-thumb{background:rgba(207,214,221,.3);border-radius:2px;}
+.sidebar-header{padding:28px 24px 20px;border-bottom:1px solid rgba(207,214,221,.20);position:sticky;top:0;background:rgba(6,8,13,.97);z-index:10;backdrop-filter:blur(8px);}
+.sidebar-back{font-family:var(--serif-display);font-size:9px;letter-spacing:.35em;color:var(--silver-deep);text-transform:uppercase;text-decoration:none;display:block;margin-bottom:14px;transition:color .2s;}.sidebar-back:hover{color:var(--silver-bright);}
+.sidebar-sigil{display:flex;justify-content:center;margin-bottom:14px;}.sidebar-sigil svg{width:48px;height:36px;filter:drop-shadow(0 2px 8px rgba(207,214,221,.45));}
+.sidebar-house{font-family:var(--serif-display);font-size:11px;letter-spacing:.3em;color:var(--silver-bright);text-transform:uppercase;text-align:center;font-weight:600;margin-bottom:4px;}
+.sidebar-seat{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);text-align:center;}
+.sidebar-members{padding:16px 0;}
+.sidebar-member{display:block;padding:11px 24px;text-decoration:none;transition:background .2s;border-left:2px solid transparent;position:relative;}
+.sidebar-member:hover,.sidebar-member.active{background:rgba(59,120,184,.22);border-left-color:var(--silver-bright);}
+.sidebar-member-name{font-family:var(--serif-display);font-size:11.5px;letter-spacing:.12em;color:var(--cream);text-transform:uppercase;font-weight:500;display:block;line-height:1.3;}
+.sidebar-member-meta{font-family:var(--serif-italic);font-style:italic;font-size:12px;color:var(--silver-deep);display:flex;gap:8px;align-items:center;margin-top:2px;}
+.sidebar-member-meta .age{color:var(--silver-bright);font-style:normal;font-family:var(--serif-display);font-size:10px;letter-spacing:.15em;}
+.main{flex:1;max-width:880px;padding:0 48px 80px;}
+.chrome{position:sticky;top:0;background:linear-gradient(180deg,var(--ink) 0%,var(--ink-soft) 100%);border-bottom:1px solid rgba(207,214,221,.25);padding:18px 0;display:flex;justify-content:space-between;align-items:center;z-index:50;backdrop-filter:blur(8px);}
+.chrome-title{font-family:var(--serif-display);font-size:13px;letter-spacing:.35em;color:var(--silver-bright);text-transform:uppercase;font-weight:500;}
+.chrome-nav{display:flex;gap:28px;font-family:var(--serif-display);font-size:11px;letter-spacing:.25em;color:var(--cream-dim);text-transform:uppercase;}
+.chrome-nav a{color:var(--cream-dim);text-decoration:none;transition:color .3s;}.chrome-nav a:hover{color:var(--silver-bright);}
+.hero{padding:70px 0 60px;display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center;}
+.house-mark{display:inline-flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:28px;}
+.house-crown{width:70px;height:50px;}.house-crown svg{width:100%;height:100%;filter:drop-shadow(0 2px 8px rgba(207,214,221,.5));}
+.house-line{font-family:var(--serif-display);font-size:11px;letter-spacing:.42em;color:var(--silver-bright);text-transform:uppercase;font-weight:500;}
+.given-name{font-family:var(--serif-display);font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:.02em;color:var(--cream);line-height:.95;margin-bottom:6px;text-transform:uppercase;}
+.house-name{font-family:var(--serif-italic);font-size:clamp(24px,3.5vw,38px);font-weight:400;font-style:italic;color:var(--silver-bright);letter-spacing:.04em;margin-bottom:14px;}
+.epithet{display:inline-block;font-family:var(--serif-display);font-size:12px;letter-spacing:.4em;color:var(--platinum-bright);text-transform:uppercase;padding:8px 0;border-top:1px solid rgba(207,214,221,.55);border-bottom:1px solid rgba(207,214,221,.55);margin:16px 0 28px;font-weight:500;}
+.titles{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+.title-pill{font-family:var(--serif-display);font-size:9.5px;letter-spacing:.28em;color:var(--silver-bright);text-transform:uppercase;padding:7px 14px;border:1px solid rgba(207,214,221,.4);background:rgba(59,120,184,.14);font-weight:500;}
+.title-pill.primary{border-color:var(--silver-bright);background:rgba(207,214,221,.10);color:var(--platinum-bright);}
+.epigraph{font-family:var(--serif-italic);font-style:italic;font-size:19px;line-height:1.5;color:var(--cream-dim);padding-left:22px;border-left:2px solid var(--silver-bright);max-width:480px;}
+.hero-portrait{position:relative;border:1px solid rgba(207,214,221,.45);background:var(--ink-soft);padding:12px;box-shadow:0 0 0 1px rgba(207,214,221,.2),0 30px 80px -20px rgba(0,0,0,.85),inset 0 0 100px rgba(0,0,0,.5);}
+.hero-portrait::before,.hero-portrait::after{content:'';position:absolute;width:28px;height:28px;border:1.5px solid var(--silver-bright);}
+.hero-portrait::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.hero-portrait::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+.hero-portrait img{width:100%;display:block;filter:contrast(1.06) brightness(.97);}
+.vitals{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(207,214,221,.30);border-bottom:1px solid rgba(207,214,221,.30);margin:70px 0 0;}
+.vital{padding:26px 22px;text-align:center;border-right:1px solid rgba(207,214,221,.18);}.vital:last-child{border-right:none;}
+.vital-label{font-family:var(--serif-display);font-size:9px;letter-spacing:.3em;color:var(--silver-bright);text-transform:uppercase;margin-bottom:12px;font-weight:500;}
+.vital-value{font-family:var(--serif-italic);font-size:20px;color:var(--cream);font-style:italic;}
+.vital-value.large{font-size:28px;font-weight:500;font-family:var(--serif-display);font-style:normal;}
+.ornament{display:flex;align-items:center;gap:18px;margin:56px 0;}
+.ornament .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(207,214,221,.45),transparent);}
+.ornament .glyph{font-family:var(--serif-display);font-size:10px;color:var(--silver-bright);letter-spacing:.5em;flex-shrink:0;}
+.section-head{display:flex;align-items:baseline;gap:20px;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(207,214,221,.22);}
+.section-num{font-family:var(--serif-display);font-size:11px;letter-spacing:.3em;color:var(--silver-bright);text-transform:uppercase;font-weight:500;flex-shrink:0;}
+.section-title{font-family:var(--serif-display);font-size:20px;font-weight:600;letter-spacing:.12em;color:var(--cream);text-transform:uppercase;}
+.section-sub{font-family:var(--serif-italic);font-style:italic;font-size:15px;color:var(--cream-dim);margin-left:auto;}
+.body-text{font-family:var(--serif-body);font-size:17px;line-height:1.75;color:var(--cream-dim);margin-bottom:20px;}
+.body-text em{font-family:var(--serif-italic);font-style:italic;color:var(--cream);}
+.attr-list{display:grid;grid-template-columns:110px 1fr;gap:14px 24px;margin-top:8px;}
+.attr-key{font-family:var(--serif-display);font-size:10px;letter-spacing:.25em;color:var(--silver-bright);text-transform:uppercase;padding-top:4px;font-weight:500;}
+.attr-val{font-family:var(--serif-body);color:var(--cream);font-size:16px;line-height:1.6;}
+.attr-val em{font-family:var(--serif-italic);color:var(--cream-dim);font-style:italic;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin-bottom:20px;}
+.gallery-item{border:1px solid rgba(207,214,221,.30);background:var(--ink-soft);padding:8px;}
+.gallery-item img{width:100%;display:block;filter:contrast(1.04) brightness(.96);}
+.gallery-caption{margin-top:10px;}
+.gallery-caption .label{font-family:var(--serif-display);font-size:9px;letter-spacing:.3em;color:var(--silver-bright);text-transform:uppercase;margin-bottom:4px;}
+.gallery-caption .desc{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);line-height:1.4;}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.rel-card{border:1px solid rgba(207,214,221,.22);background:linear-gradient(135deg,rgba(59,120,184,.10) 0%,rgba(13,22,38,.35) 100%);padding:24px 22px;}
+.rel-name{font-family:var(--serif-display);font-size:13px;letter-spacing:.18em;color:var(--cream);text-transform:uppercase;font-weight:600;margin-bottom:4px;}
+.rel-name a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(207,214,221,.4);transition:border-color .2s;}
+.rel-name a:hover{border-color:var(--silver-bright);}
+.rel-role{font-family:var(--serif-italic);font-style:italic;font-size:14px;color:var(--silver-bright);margin-bottom:10px;}
+.rel-text{font-family:var(--serif-body);font-size:15px;line-height:1.65;color:var(--cream-dim);}
+.pullquote{margin:36px 0 0;padding:22px 0;font-family:var(--serif-display);font-size:13.5px;letter-spacing:.18em;color:var(--platinum-bright);text-transform:uppercase;font-weight:500;border-top:1px solid rgba(207,214,221,.3);border-bottom:1px solid rgba(207,214,221,.3);text-align:center;}
+.encyc-footer{text-align:center;padding:60px 0 20px;border-top:1px solid rgba(207,214,221,.18);display:flex;flex-direction:column;align-items:center;gap:20px;}
+.footer-mark svg{width:44px;height:32px;opacity:.75;}
+.footer-text{display:flex;flex-direction:column;gap:8px;align-items:center;}
+.footer-text em{font-family:var(--serif-italic);font-style:italic;font-size:17px;color:var(--cream-dim);max-width:520px;text-align:center;line-height:1.5;}
+.footer-text .meta{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--silver-deep);text-transform:uppercase;margin-top:4px;}
+.mobile-back{display:none;}
+@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}.mobile-back{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--silver-deep);text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(207,214,221,.20);transition:color .2s;}.mobile-back:hover{color:var(--silver-bright);}.chrome{padding-top:14px;}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <a href="galmir-azane.html" class="sidebar-back">← House Galmir · Azane</a>
+      <div class="sidebar-sigil"><svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 30 C32 22, 22 20, 12 24 C18 26, 22 28, 26 32 C20 32, 14 34, 8 38 C16 38, 22 38, 28 36 C24 40, 22 44, 20 48 C28 42, 34 36, 40 32 Z" stroke="#cfd6dd" stroke-width="1" fill="rgba(207,214,221,0.18)"/>
+<path d="M40 30 C48 22, 58 20, 68 24 C62 26, 58 28, 54 32 C60 32, 66 34, 72 38 C64 38, 58 38, 52 36 C56 40, 58 44, 60 48 C52 42, 46 36, 40 32 Z" stroke="#cfd6dd" stroke-width="1" fill="rgba(207,214,221,0.18)"/>
+<path d="M40 18 L40 44" stroke="#e8edf2" stroke-width="0.9" opacity="0.7"/>
+</svg></div>
+      <div class="sidebar-house">Galmir · Azane</div><div class="sidebar-seat">Aurora · Melyra's Branch</div>
+    </div>
+    <div class="sidebar-members">
+      <a href="melyra.html" class="sidebar-member"><span class="sidebar-member-name">Melyra Galmir</span><span class="sidebar-member-meta"><span class="age">531</span><span>Matriarch · Wings of Myrient</span></span></a>
+      <a href="marcus-azane.html" class="sidebar-member"><span class="sidebar-member-name">Marcus Azane</span><span class="sidebar-member-meta"><span class="age">324</span><span>Patriarch · Azenmor</span></span></a>
+      <a href="myra.html" class="sidebar-member active"><span class="sidebar-member-name">Myra Galmir</span><span class="sidebar-member-meta"><span class="age">87</span><span>Eldest Daughter · Mother of Myrin</span></span></a>
+      <a href="diamyra.html" class="sidebar-member"><span class="sidebar-member-name">Diamyra Azane</span><span class="sidebar-member-meta"><span class="age">86</span><span>Renowned Warrior · Duelist</span></span></a>
+      <a href="myrella.html" class="sidebar-member"><span class="sidebar-member-name">Myrella Galmir</span><span class="sidebar-member-meta"><span class="age">40</span><span>The Blood Mother</span></span></a>
+      <a href="maylyra.html" class="sidebar-member"><span class="sidebar-member-name">Maylyra Azane</span><span class="sidebar-member-meta"><span class="age">32</span><span>Blood Child Prospecting</span></span></a>
+      <a href="mimyr.html" class="sidebar-member"><span class="sidebar-member-name">Mimyr Galmir</span><span class="sidebar-member-meta"><span class="age">25</span><span>Youngest Daughter</span></span></a>
+      <a href="myrin.html" class="sidebar-member"><span class="sidebar-member-name">Myrin Galmir</span><span class="sidebar-member-meta"><span class="age">∞</span><span>Blood Child · Apex Infant</span></span></a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <a href="galmir-azane.html" class="mobile-back">← House Galmir · Azane</a>
+    <div class="chrome">
+      <div class="chrome-title">The Lost Prince — Character Encyclopedia</div>
+      <div class="chrome-nav"><a href="index.html">Houses</a><a href="galmir-azane.html">Galmir · Azane</a><span>Volume II</span></div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <div class="house-mark">
+          <div class="house-crown"><svg viewBox="0 0 96 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M48 36 C38 26, 26 22, 14 28 C22 30, 28 33, 34 38 C26 38, 16 41, 8 46 C20 46, 30 46, 38 43 C32 49, 28 55, 25 60 C36 51, 44 43, 48 38 Z" stroke="#e8edf2" stroke-width="1.2" fill="rgba(207,214,221,0.22)"/>
+<path d="M48 36 C58 26, 70 22, 82 28 C74 30, 68 33, 62 38 C70 38, 80 41, 88 46 C76 46, 66 46, 58 43 C64 49, 68 55, 71 60 C60 51, 52 43, 48 38 Z" stroke="#e8edf2" stroke-width="1.2" fill="rgba(207,214,221,0.22)"/>
+<path d="M48 22 L48 56" stroke="#f1f3f5" stroke-width="1.0" opacity="0.8"/>
+<circle cx="48" cy="36" r="2.5" fill="#f1f3f5" opacity="0.85"/>
+</svg></div>
+          <div class="house-line">House Galmir · Azane · Aurora</div>
+        </div>
+        <div class="given-name">Myra</div>
+        <div class="house-name">Galmir</div>
+        <div class="epithet">✦ Eldest Daughter · Blood Child Fulfilled</div>
+        <div class="titles">
+          <span class="title-pill primary">Senior Daughter</span>
+          <span class="title-pill">Blood Child Fulfilled</span>
+          <span class="title-pill">Mother of Myrin</span>
+        </div>
+        <div class="epigraph">The eldest of Melyra's daughters. The first to satisfy the framework her mother built the household around. The Blood Child obligation closed in her lifetime, in her body, on her own terms — and then, quietly, she went on living.</div>
+      </div>
+      <div>
+        <div class="hero-portrait">
+          <img src="Myra_Formal.JPG" alt="Myra Galmir">
+        </div>
+      </div>
+    </div>
+
+    <div class="vitals">
+      <div class="vital"><div class="vital-label">Age</div><div class="vital-value large">87</div></div>
+      <div class="vital"><div class="vital-label">House</div><div class="vital-value">Galmir · Azane</div></div>
+      <div class="vital"><div class="vital-label">Status</div><div class="vital-value">Blood Child Fulfilled</div></div>
+      <div class="vital"><div class="vital-label">Partner</div><div class="vital-value">Titano Rue</div></div>
+    </div>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">I.</span><div class="section-title">Standing</div></div>
+<p class="body-text"><em>Eldest daughter of Melyra Galmir and Marcus Azane. Mother of Myrin. Partner — by her own arrangement and her own choosing — of Titano Rue.</em></p><p class="body-text">In the framework Melyra has built around this branch — <em>blood children first, marriage second</em> — Myra is the one who has already done the work. The lineage obligation is complete. The arcane legacy is carried forward in her son. What she does next is hers.</p><p class="body-text">She is the senior daughter of the Galmir-Azane line, the one her younger sisters look to in different ways for different reasons. Her composure is the household's steady thread.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">II.</span><div class="section-title">Appearance</div></div>
+<div class="attr-list"><div class="attr-key">Bearing</div><div class="attr-val">Composed. Practiced. The senior-daughter posture worn easily, not performed.</div><div class="attr-key">Style</div><div class="attr-val">Formal portraiture in the Galmir-Azane palette — sky blues, whites, silver detailing. Embroidery in the Wings-of-Myrient motif at cuff and hem when the occasion calls for it.</div><div class="attr-key">In Private</div><div class="attr-val">Casual when she is with Myrin. The face she wears at council does not survive contact with her son. <em>This is not a contradiction.</em></div></div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">III.</span><div class="section-title">The Blood Child Fulfilled</div></div>
+<p class="body-text">Myrin Galmir was born of Myra and Titano Rue roughly four to five months before the series opens. He is a Blood Child in the strict canonical sense — the arrangement Melyra prizes above all formal marriage in this branch — and his Apex status was confirmed in infancy.</p><p class="body-text">His last name is Galmir. The naming follows the alternating convention with Galmir on this side of the alternation; the more powerful line takes the name when there is one, and the Galmir name on a Novan-track infant carries weight Melyra is not interested in giving away. <em>Melyra and Myra both offered the Rue name to Titano</em>, breaking convention deliberately, to give him an heir for a house that has no one else left. Titano declined, with the same quiet finality he carries everything else.</p><p class="body-text">The decline did not damage the partnership. If anything, it clarified what it was.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">IV.</span><div class="section-title">What Comes Next</div></div>
+<p class="body-text">The lineage obligation is closed. Myra is, in Melyra's framework, free.</p><p class="body-text">What that freedom looks like, day to day, is largely an open question at series start. Her arrangement with Titano holds. Her son is at Aurora under her mother's roof and her sisters' hands. Her position in the household's political life — quiet, central, deferred to without ceremony — is not something she has indicated any interest in trading for anything else.</p><p class="body-text">She is the daughter Melyra does not have to think about. That is its own kind of standing.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">V.</span><div class="section-title">Portraits</div></div>
+<div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Myra_Formal.JPG" alt="Myra Galmir, formal portrait">
+          <div class="gallery-caption"><div class="label">Formal</div><div class="desc">The senior daughter at full composure. Galmir-Azane palette.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Myra_With_Myrin_Casual.JPG" alt="Myra Galmir holding her son Myrin">
+          <div class="gallery-caption"><div class="label">With Myrin · Casual</div><div class="desc">Myrin in her arms. The face she does not wear at council.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">VI.</span><div class="section-title">Relations</div></div>
+<div class="rel-grid">
+        <div class="rel-card">
+          <div class="rel-name"><a href="melyra.html">Melyra Galmir</a></div>
+          <div class="rel-role">Mother · Matriarch</div>
+          <div class="rel-text">Eldest daughter of the matriarch. Inheritor of Melyra's framework — and the first of her sisters to satisfy it. The relationship is uncomplicated by the standards of this house: respect, alignment, no friction worth naming.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name">Titano Rue</div>
+          <div class="rel-role">Partner · Father of Myrin</div>
+          <div class="rel-text">Warmaster of the War Force. Last living member of House Rue. Father of her son. The arrangement is by mutual choice and survives at its own quiet pace. His decline of the Rue name for Myrin was received without conflict — she had offered it, with Melyra, knowing how it might land. <em>It landed exactly as it landed.</em></div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name">Myrin Galmir</div>
+          <div class="rel-role">Son · Blood Child · Apex Infant</div>
+          <div class="rel-text">Roughly four to five months old at series start. Confirmed Apex. Present at Aurora under his grandmother's roof and his aunts' hands. The center of his mother's quieter life.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="diamyra.html">Diamyra Azane</a></div>
+          <div class="rel-role">Younger Sister</div>
+          <div class="rel-text">The warrior sister. The one absent from the opening arc on account of an unresolved tournament rivalry with Dixie Vendrith. Myra watches her sister move through the world with the older-sister composure of someone who has already chosen her own path and trusts Diamyra to find hers.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="myrella.html">Myrella Galmir</a></div>
+          <div class="rel-role">Younger Sister · The Blood Mother</div>
+          <div class="rel-text">The center of the family's most consequential arrangement. Where Myra's blood-child obligation closed quietly with Titano, Myrella's opens publicly, with the Crown. The two sisters share the framework but not the scale.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="maylyra.html">Maylyra Azane</a></div>
+          <div class="rel-role">Younger Sister</div>
+          <div class="rel-text">Currently being prospected for. Myra is the example the prospecting refers to, whether anyone says so or not.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <footer class="encyc-footer">
+      <div class="footer-mark"><svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 30 C32 22, 22 20, 12 24 C18 26, 22 28, 26 32 C20 32, 14 34, 8 38 C16 38, 22 38, 28 36 C24 40, 22 44, 20 48 C28 42, 34 36, 40 32 Z" stroke="#cfd6dd" stroke-width="1" fill="rgba(207,214,221,0.18)"/>
+<path d="M40 30 C48 22, 58 20, 68 24 C62 26, 58 28, 54 32 C60 32, 66 34, 72 38 C64 38, 58 38, 52 36 C56 40, 58 44, 60 48 C52 42, 46 36, 40 32 Z" stroke="#cfd6dd" stroke-width="1" fill="rgba(207,214,221,0.18)"/>
+<path d="M40 18 L40 44" stroke="#e8edf2" stroke-width="0.9" opacity="0.7"/>
+</svg></div>
+      <div class="footer-text">
+        <em>"The lineage obligation is closed. What comes next is hers."</em>
+        <span class="meta">Character Encyclopedia · Volume II · House Galmir · Azane</span>
+      </div>
+    </footer>
+  </div>
+</div>
+<div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(6,8,13,0.95); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
+  <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(207,214,221,0.45); box-shadow:0 0 0 1px rgba(207,214,221,0.2), 0 40px 100px -20px rgba(0,0,0,0.9);">
+</div>
+<script>
+  (function() {
+    var overlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img.id === 'lightbox-img') return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        e.preventDefault();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.style.display = 'flex';
+      });
+    });
+    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.style.display = 'none';
+    });
+  })();
+</script>
+</body>
+</html>
