@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jackie Vendrith — The Lost Prince Character Encyclopedia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--royal-blue:#1e3a8a;--royal-blue-deep:#14276a;--royal-blue-darker:#0a173f;--gold:#c9a449;--gold-bright:#e8c873;--gold-deep:#8b6f2c;--cream:#f4ecdc;--cream-dim:#d9cdb4;--ink:#050814;--ink-soft:#0e1a3a;--serif-display:'Cinzel',serif;--serif-body:'EB Garamond',serif;--serif-italic:'Cormorant Garamond',serif;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif-body);font-size:17px;line-height:1.7;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(30,58,138,.20) 0%,transparent 45%),radial-gradient(circle at 80% 70%,rgba(20,39,106,.28) 0%,transparent 50%),radial-gradient(circle at 50% 100%,rgba(10,23,63,.55) 0%,transparent 60%);pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.03 0 0 0 0 0.04 0 0 0 0 0.08 0 0 0 0.4 0'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.5'/></svg>");opacity:.5;pointer-events:none;z-index:1;mix-blend-mode:overlay;}
+.layout{position:relative;z-index:2;display:flex;min-height:100vh;}
+.sidebar{width:300px;flex-shrink:0;background:linear-gradient(180deg,rgba(14,26,58,.98) 0%,rgba(5,8,20,.98) 100%);border-right:1px solid rgba(201,164,73,.28);position:sticky;top:0;height:100vh;overflow-y:auto;padding:0 0 40px;scrollbar-width:thin;scrollbar-color:rgba(201,164,73,.35) transparent;}
+.sidebar::-webkit-scrollbar{width:4px;}.sidebar::-webkit-scrollbar-thumb{background:rgba(201,164,73,.35);border-radius:2px;}
+.sidebar-header{padding:28px 24px 20px;border-bottom:1px solid rgba(201,164,73,.25);position:sticky;top:0;background:rgba(5,8,20,.97);z-index:10;backdrop-filter:blur(8px);}
+.sidebar-back{font-family:var(--serif-display);font-size:9px;letter-spacing:.35em;color:var(--gold-deep);text-transform:uppercase;text-decoration:none;display:block;margin-bottom:14px;transition:color .2s;}.sidebar-back:hover{color:var(--gold-bright);}
+.sidebar-sigil{display:flex;justify-content:center;margin-bottom:14px;}
+.g-mark{display:flex;align-items:center;justify-content:center;font-family:var(--serif-display);font-weight:700;color:var(--gold);background:linear-gradient(135deg,rgba(30,58,138,.55) 0%,rgba(10,23,63,.88) 100%);border:1px solid rgba(201,164,73,.55);border-radius:50%;line-height:1;}
+.sidebar-sigil .g-mark{width:44px;height:44px;font-size:26px;filter:drop-shadow(0 2px 8px rgba(201,164,73,.35));}
+.sidebar-house{font-family:var(--serif-display);font-size:11px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;text-align:center;font-weight:600;margin-bottom:4px;}
+.sidebar-seat{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);text-align:center;}
+.sidebar-members{padding:16px 0;}
+.sidebar-member{display:block;padding:11px 24px;text-decoration:none;transition:background .2s;border-left:2px solid transparent;position:relative;}
+.sidebar-member:hover,.sidebar-member.active{background:rgba(30,58,138,.30);border-left-color:var(--gold-bright);}
+.sidebar-member-name{font-family:var(--serif-display);font-size:11.5px;letter-spacing:.12em;color:var(--cream);text-transform:uppercase;font-weight:500;display:block;line-height:1.3;}
+.sidebar-member-meta{font-family:var(--serif-italic);font-style:italic;font-size:12px;color:var(--gold-deep);display:flex;gap:8px;align-items:center;margin-top:2px;}
+.sidebar-member-meta .age{color:var(--gold-bright);font-style:normal;font-family:var(--serif-display);font-size:10px;letter-spacing:.15em;}
+.main{flex:1;max-width:880px;padding:0 48px 80px;}
+.chrome{position:sticky;top:0;background:linear-gradient(180deg,var(--ink) 0%,var(--ink-soft) 100%);border-bottom:1px solid rgba(201,164,73,.30);padding:18px 0;display:flex;justify-content:space-between;align-items:center;z-index:50;backdrop-filter:blur(8px);}
+.chrome-title{font-family:var(--serif-display);font-size:13px;letter-spacing:.35em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;}
+.chrome-nav{display:flex;gap:28px;font-family:var(--serif-display);font-size:11px;letter-spacing:.25em;color:var(--cream-dim);text-transform:uppercase;}
+.chrome-nav a{color:var(--cream-dim);text-decoration:none;transition:color .3s;}.chrome-nav a:hover{color:var(--gold-bright);}
+.hero{padding:70px 0 60px;display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center;}
+.house-mark{display:inline-flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:28px;}
+.hero .g-mark{width:50px;height:50px;font-size:30px;filter:drop-shadow(0 2px 8px rgba(201,164,73,.45));}
+.house-line{font-family:var(--serif-display);font-size:11px;letter-spacing:.42em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;}
+.given-name{font-family:var(--serif-display);font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:.02em;color:var(--cream);line-height:.95;margin-bottom:6px;text-transform:uppercase;}
+.house-name{font-family:var(--serif-italic);font-size:clamp(24px,3.5vw,38px);font-weight:400;font-style:italic;color:var(--gold-bright);letter-spacing:.04em;margin-bottom:14px;}
+.epithet{display:inline-block;font-family:var(--serif-display);font-size:12px;letter-spacing:.4em;color:var(--gold-bright);text-transform:uppercase;padding:8px 0;border-top:1px solid rgba(201,164,73,.55);border-bottom:1px solid rgba(201,164,73,.55);margin:16px 0 28px;font-weight:500;}
+.titles{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+.title-pill{font-family:var(--serif-display);font-size:9.5px;letter-spacing:.28em;color:var(--gold-bright);text-transform:uppercase;padding:7px 14px;border:1px solid rgba(201,164,73,.45);background:rgba(30,58,138,.18);font-weight:500;}
+.title-pill.primary{border-color:var(--gold-bright);background:rgba(201,164,73,.12);color:var(--gold-bright);}
+.epigraph{font-family:var(--serif-italic);font-style:italic;font-size:19px;line-height:1.5;color:var(--cream-dim);padding-left:22px;border-left:2px solid var(--gold-bright);max-width:480px;}
+.hero-portrait{position:relative;border:1px solid rgba(201,164,73,.50);background:var(--ink-soft);padding:12px;box-shadow:0 0 0 1px rgba(201,164,73,.22),0 30px 80px -20px rgba(0,0,0,.85),inset 0 0 100px rgba(0,0,0,.5);}
+.hero-portrait::before,.hero-portrait::after{content:'';position:absolute;width:28px;height:28px;border:1.5px solid var(--gold-bright);}
+.hero-portrait::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.hero-portrait::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+.hero-portrait img{width:100%;display:block;filter:contrast(1.06) brightness(.97);}
+.vitals{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(201,164,73,.35);border-bottom:1px solid rgba(201,164,73,.35);margin:70px 0 0;}
+.vital{padding:26px 22px;text-align:center;border-right:1px solid rgba(201,164,73,.22);}.vital:last-child{border-right:none;}
+.vital-label{font-family:var(--serif-display);font-size:9px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:12px;font-weight:500;}
+.vital-value{font-family:var(--serif-italic);font-size:20px;color:var(--cream);font-style:italic;}
+.vital-value.large{font-size:28px;font-weight:500;font-family:var(--serif-display);font-style:normal;}
+.ornament{display:flex;align-items:center;gap:18px;margin:56px 0;}
+.ornament .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,164,73,.55),transparent);}
+.ornament .glyph{font-family:var(--serif-display);font-size:10px;color:var(--gold-bright);letter-spacing:.5em;flex-shrink:0;}
+.section-head{display:flex;align-items:baseline;gap:20px;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(201,164,73,.28);}
+.section-num{font-family:var(--serif-display);font-size:11px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;flex-shrink:0;}
+.section-title{font-family:var(--serif-display);font-size:20px;font-weight:600;letter-spacing:.12em;color:var(--cream);text-transform:uppercase;}
+.section-sub{font-family:var(--serif-italic);font-style:italic;font-size:15px;color:var(--cream-dim);margin-left:auto;}
+.body-text{font-family:var(--serif-body);font-size:17px;line-height:1.75;color:var(--cream-dim);margin-bottom:20px;}
+.body-text em{font-family:var(--serif-italic);font-style:italic;color:var(--cream);}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin-bottom:20px;}
+.gallery-item{border:1px solid rgba(201,164,73,.35);background:var(--ink-soft);padding:8px;}
+.gallery-item img{width:100%;display:block;filter:contrast(1.04) brightness(.96);}
+.gallery-caption{margin-top:10px;}
+.gallery-caption .label{font-family:var(--serif-display);font-size:9px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:4px;}
+.gallery-caption .desc{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);line-height:1.4;}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.rel-card{border:1px solid rgba(201,164,73,.28);background:linear-gradient(135deg,rgba(30,58,138,.14) 0%,rgba(14,26,58,.45) 100%);padding:24px 22px;}
+.rel-name{font-family:var(--serif-display);font-size:13px;letter-spacing:.18em;color:var(--cream);text-transform:uppercase;font-weight:600;margin-bottom:4px;}
+.rel-role{font-family:var(--serif-italic);font-style:italic;font-size:14px;color:var(--gold-bright);margin-bottom:10px;}
+.rel-text{font-family:var(--serif-body);font-size:15px;line-height:1.65;color:var(--cream-dim);}
+.attr-list{display:grid;grid-template-columns:110px 1fr;gap:14px 24px;margin-top:8px;}
+.attr-key{font-family:var(--serif-display);font-size:10px;letter-spacing:.25em;color:var(--gold-bright);text-transform:uppercase;padding-top:4px;font-weight:500;}
+.attr-val{font-family:var(--serif-body);color:var(--cream);font-size:16px;line-height:1.6;}
+.attr-val em{font-family:var(--serif-italic);color:var(--cream-dim);font-style:italic;}
+.encyc-footer{text-align:center;padding:60px 0 20px;border-top:1px solid rgba(201,164,73,.25);display:flex;flex-direction:column;align-items:center;gap:20px;}
+.footer-mark .g-mark{width:36px;height:36px;font-size:22px;opacity:.80;}
+.footer-text{display:flex;flex-direction:column;gap:8px;align-items:center;}
+.footer-text em{font-family:var(--serif-italic);font-style:italic;font-size:17px;color:var(--cream-dim);max-width:520px;text-align:center;line-height:1.5;}
+.footer-text .meta{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;margin-top:4px;}
+.mobile-back{display:none;}
+@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}.mobile-back{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(201,164,73,.25);transition:color .2s;}.mobile-back:hover{color:var(--gold-bright);}.chrome{padding-top:14px;}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <a href="galmir-vendrith.html" class="sidebar-back">← House Galmir · Vendrith</a>
+      <div class="sidebar-sigil"><div class="g-mark">G</div></div>
+      <div class="sidebar-house">Galmir · Vendrith</div><div class="sidebar-seat">Grandholm · Maia's Branch</div>
+    </div>
+    <div class="sidebar-members">
+      <a href="maia.html" class="sidebar-member"><span class="sidebar-member-name">Maia Galmir</span><span class="sidebar-member-meta"><span class="age">327</span><span>Matriarch · Sole Head of House</span></span></a>
+      <a href="david-vendrith.html" class="sidebar-member"><span class="sidebar-member-name">David Vendrith</span><span class="sidebar-member-meta"><span class="age">242</span><span>Consort · Grandholm</span></span></a>
+      <a href="maini.html" class="sidebar-member"><span class="sidebar-member-name">Maini Galmir</span><span class="sidebar-member-meta"><span class="age">87</span><span>Eldest Daughter · Dardena</span></span></a>
+      <a href="lyle-helsird.html" class="sidebar-member"><span class="sidebar-member-name">Lyle Helsird</span><span class="sidebar-member-meta"><span class="age">—</span><span>Maini's Husband · Dardena</span></span></a>
+      <a href="dixie.html" class="sidebar-member"><span class="sidebar-member-name">Dixenthra Vendrith</span><span class="sidebar-member-meta"><span class="age">86</span><span>Daughter · The Legion</span></span></a>
+      <a href="claudia.html" class="sidebar-member"><span class="sidebar-member-name">Claudia Galmir</span><span class="sidebar-member-meta"><span class="age">42</span><span>Daughter · Astravar Reach</span></span></a>
+      <a href="margaret.html" class="sidebar-member"><span class="sidebar-member-name">Margaret Vendrith</span><span class="sidebar-member-meta"><span class="age">39</span><span>Daughter · Martinhal</span></span></a>
+      <a href="sandy.html" class="sidebar-member"><span class="sidebar-member-name">Sandy Galmir</span><span class="sidebar-member-meta"><span class="age">37</span><span>Daughter · Rhill Thread</span></span></a>
+      <a href="jackie.html" class="sidebar-member active"><span class="sidebar-member-name">Jackie Vendrith</span><span class="sidebar-member-meta"><span class="age">34</span><span>Daughter · Martial Thread</span></span></a>
+      <a href="holly.html" class="sidebar-member"><span class="sidebar-member-name">Holly Galmir</span><span class="sidebar-member-meta"><span class="age">26</span><span>Daughter · Lessio's Future Wife</span></span></a>
+      <a href="daisy.html" class="sidebar-member"><span class="sidebar-member-name">Diazetta Galmir</span><span class="sidebar-member-meta"><span class="age">20</span><span>Granddaughter · Maini's Daughter</span></span></a>
+      <a href="doxin.html" class="sidebar-member"><span class="sidebar-member-name">Doxin Helsird</span><span class="sidebar-member-meta"><span class="age">19</span><span>Grandson · Maini's Son</span></span></a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <a href="galmir-vendrith.html" class="mobile-back">← House Galmir · Vendrith</a>
+    <div class="chrome">
+      <div class="chrome-title">The Lost Prince — Character Encyclopedia</div>
+      <div class="chrome-nav"><a href="index.html">Houses</a><a href="galmir-vendrith.html">Vendrith</a><span>Volume II</span></div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <div class="house-mark">
+          <div class="g-mark">G</div>
+          <div class="house-line">House Galmir · Vendrith</div>
+        </div>
+        <div class="given-name">Jackie</div>
+        <div class="house-name">Vendrith</div>
+        <div class="epithet">✦ The Martial Thread</div>
+        <div class="titles">
+          <span class="title-pill primary">Betrothed to Mars Martial</span>
+          <span class="title-pill">The Tyrana Negotiation</span>
+          <span class="title-pill">Terms Filed Quietly</span>
+        </div>
+        <div class="epigraph">Sixth of Maia's daughters. The Martial thread. Tyrana asked for a Galmir by name; Maia countered with a Vendrith and attached three conditions Tyrana accepted and filed quietly as a humiliation. With this match, Maia now has two Martial sons in her web simultaneously: Mars through Jackie, and Damon through the Crown.</div>
+      </div>
+      <div>
+        <div class="hero-portrait"><img src="Jackie_Vendrith_Dinner.PNG" alt="Jackie Vendrith"></div>
+      </div>
+    </div>
+
+    <div class="vitals">
+      <div class="vital"><div class="vital-label">Age</div><div class="vital-value large">34</div></div>
+      <div class="vital"><div class="vital-label">Branch</div><div class="vital-value">Vendrith</div></div>
+      <div class="vital"><div class="vital-label">Status</div><div class="vital-value">Betrothed</div></div>
+      <div class="vital"><div class="vital-label">Role</div><div class="vital-value">Martial Thread</div></div>
+    </div>
+
+    <section>
+      <div class="section-head"><span class="section-num">I.</span><div class="section-title">Standing</div></div>
+      <p class="body-text"><em>Sixth of Maia's daughters. Betrothed to Mars (Marshall) Martial, age 47, spear-and-shield specialist of Faction Two of the Martial family.</em></p>
+      <p class="body-text">The match is one of the two most politically loaded in Maia's entire map. The negotiation behind it — Tyrana's public acceptance, the conditions Maia attached, the quiet humiliation filed away for future leverage — is canonical, precise, and a template for how Maia operates when she wants something the other side values more than it is willing to admit.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">II.</span><div class="section-title">Appearance</div></div>
+      <div class="attr-list">
+        <div class="attr-key">Hair</div>
+        <div class="attr-val">Dark, long, worn with sharp elegance. <em>The Vendrith silhouette sharpened for social settings where reading the room matters most.</em></div>
+        <div class="attr-key">Eyes</div>
+        <div class="attr-val">Dark.</div>
+        <div class="attr-key">Build</div>
+        <div class="attr-val">Tall, strong, fit — built for the combat-heavy household she is marrying into.</div>
+        <div class="attr-key">Bearing</div>
+        <div class="attr-val">Composed. <em>Knows her marriage came with three attached conditions and one quiet humiliation for the other side.</em> She carries that weight easily.</div>
+      </div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">III.</span><div class="section-title">The Tyrana Negotiation</div></div>
+      <p class="body-text">Tyrana initially proposed a full <em>Galmir by name</em> — the highest-prestige Maia daughter she could ask for. Maia countered with Jackie Vendrith. Tyrana accepted. On paper it looks like agreement. In Tyrana's private ledger, <em>it is a quiet humiliation she has noted and filed.</em></p>
+      <p class="body-text">Three conditions came with Maia's counter, all accepted publicly by Tyrana:</p>
+      <p class="body-text">1. Children of the marriage carry <em>Galmir/Vendrith names first</em>, not Martial.<br>2. Mars <em>relocates to Dardena</em> — he comes to Maia's territory, not the other way around.<br>3. Martial Province <em>opens a trade concession to Galmir commercial interests.</em></p>
+      <p class="body-text">None of the three is merely symbolic. The names reverse Tyrana's matrilineal authority for this branch. The relocation removes Mars from Faction Two's daily orbit. The trade concession moves real money. Tyrana agreed to all three because she wanted a Galmir name and could not get one — the Vendrith match combined with the concessions was the closest she could reach.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">IV.</span><div class="section-title">Two Martial Sons, One Web</div></div>
+      <p class="body-text">With this match, Maia holds two Martial sons in her web at the same time. Mars comes to her through Jackie. Damon comes to her through the Crown, via Mez-tah Toraiyo's betrothal. Tyrana is therefore bound in two directions simultaneously — a structural asymmetry that no other house in the kingdom currently imposes on her.</p>
+      <p class="body-text">Jackie's role in this is simple and enormous: she is the second node of that binding. Without her, the lattice is half-built. <em>Without her, Tyrana is bound to the Crown and nothing more.</em> Maia does not need Jackie to run her household the way Claudia will run hers — she needs Jackie to be present, to be Vendrith, and to produce Galmir-Vendrith-named children in Dardena.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">V.</span><div class="section-title">The Gallery</div></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Jackie_Vendrith_Dinner.PNG" alt="Jackie Vendrith — dinner">
+          <div class="gallery-caption"><div class="label">At Table</div><div class="desc">The social register. Private gatherings where the negotiation behind her future is a silent presence.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Jackie_Vendrith_Dinner_Candid.PNG" alt="Jackie Vendrith — candid">
+          <div class="gallery-caption"><div class="label">Candid</div><div class="desc"><em>Unposed. The Vendrith poise in a moment she did not curate.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Jackie_Vendrith_Battle.PNG" alt="Jackie Vendrith — battle">
+          <div class="gallery-caption"><div class="label">Battle</div><div class="desc">House colors adapted to the combat register. Preparation for the Martial household she will join.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Jackie_Vendrith_Athletic_.PNG" alt="Jackie Vendrith — athletic">
+          <div class="gallery-caption"><div class="label">Athletic</div><div class="desc">Trained. Unstrained. The fitness of a woman who expects to walk into a spear-discipline household without losing any ground on arrival.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">VI.</span><div class="section-title">Relations</div></div>
+      <div class="rel-grid">
+        <div class="rel-card">
+          <div class="rel-name"><a href="maia.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);">Maia Galmir</a></div>
+          <div class="rel-role">Mother · The Architect</div>
+          <div class="rel-text">Placed her into the Martial negotiation on terms Tyrana never forgot. Jackie understood the calculation from the start — she is not the prestige match, she is the leverage match. Both women are content with the arrangement.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name">Mars (Marshall) Martial</div>
+          <div class="rel-role">Betrothed · House Tyrana, Faction Two</div>
+          <div class="rel-text">Age 47. Calculated, defensive thinker, spear-and-shield specialist. Relocates to Dardena at the marriage per Maia's conditions. Their relationship will form inside Vendrith territory, not Martial.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name">Tyrana Martial</div>
+          <div class="rel-role">The Mother-in-Law · Silent Ledger</div>
+          <div class="rel-text">Accepted the Vendrith over the Galmir publicly. Filed the humiliation privately. Tyrana will manage a warm public register with Jackie while maintaining a quiet account of every concession that came with the marriage.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="mez-tah.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);">Mez-tah Toraiyo</a></div>
+          <div class="rel-role">The Other Martial Match</div>
+          <div class="rel-text">Betrothed to Damon Martial via Crown arrangement. Jackie and Mez-tah will share a strange adjacency — two non-Martial women married into two different Factions of the same house, holding Tyrana bound in two directions at once.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="encyc-footer">
+      <div class="footer-mark"><div class="g-mark">G</div></div>
+      <div class="footer-text">
+        <em>"Tyrana accepted a Vendrith. She noted it. She filed it."</em>
+        <span class="meta">Character Encyclopedia · Volume II · House Galmir · Vendrith</span>
+      </div>
+    </footer>
+  </div>
+</div>
+<div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(5,8,20,0.95); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
+  <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(201,164,73,0.50); box-shadow:0 0 0 1px rgba(201,164,73,0.22), 0 40px 100px -20px rgba(0,0,0,0.9);">
+</div>
+<script>
+  (function() {
+    var overlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img.id === 'lightbox-img') return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        e.preventDefault();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.style.display = 'flex';
+      });
+    });
+    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.style.display = 'none';
+    });
+  })();
+</script>
+</body>
+</html>

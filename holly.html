@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holly Galmir — The Lost Prince Character Encyclopedia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--royal-blue:#1e3a8a;--royal-blue-deep:#14276a;--royal-blue-darker:#0a173f;--gold:#c9a449;--gold-bright:#e8c873;--gold-deep:#8b6f2c;--cream:#f4ecdc;--cream-dim:#d9cdb4;--ink:#050814;--ink-soft:#0e1a3a;--serif-display:'Cinzel',serif;--serif-body:'EB Garamond',serif;--serif-italic:'Cormorant Garamond',serif;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--cream);font-family:var(--serif-body);font-size:17px;line-height:1.7;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(30,58,138,.20) 0%,transparent 45%),radial-gradient(circle at 80% 70%,rgba(20,39,106,.28) 0%,transparent 50%),radial-gradient(circle at 50% 100%,rgba(10,23,63,.55) 0%,transparent 60%);pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.03 0 0 0 0 0.04 0 0 0 0 0.08 0 0 0 0.4 0'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.5'/></svg>");opacity:.5;pointer-events:none;z-index:1;mix-blend-mode:overlay;}
+.layout{position:relative;z-index:2;display:flex;min-height:100vh;}
+.sidebar{width:300px;flex-shrink:0;background:linear-gradient(180deg,rgba(14,26,58,.98) 0%,rgba(5,8,20,.98) 100%);border-right:1px solid rgba(201,164,73,.28);position:sticky;top:0;height:100vh;overflow-y:auto;padding:0 0 40px;scrollbar-width:thin;scrollbar-color:rgba(201,164,73,.35) transparent;}
+.sidebar::-webkit-scrollbar{width:4px;}.sidebar::-webkit-scrollbar-thumb{background:rgba(201,164,73,.35);border-radius:2px;}
+.sidebar-header{padding:28px 24px 20px;border-bottom:1px solid rgba(201,164,73,.25);position:sticky;top:0;background:rgba(5,8,20,.97);z-index:10;backdrop-filter:blur(8px);}
+.sidebar-back{font-family:var(--serif-display);font-size:9px;letter-spacing:.35em;color:var(--gold-deep);text-transform:uppercase;text-decoration:none;display:block;margin-bottom:14px;transition:color .2s;}.sidebar-back:hover{color:var(--gold-bright);}
+.sidebar-sigil{display:flex;justify-content:center;margin-bottom:14px;}
+.g-mark{display:flex;align-items:center;justify-content:center;font-family:var(--serif-display);font-weight:700;color:var(--gold);background:linear-gradient(135deg,rgba(30,58,138,.55) 0%,rgba(10,23,63,.88) 100%);border:1px solid rgba(201,164,73,.55);border-radius:50%;line-height:1;}
+.sidebar-sigil .g-mark{width:44px;height:44px;font-size:26px;filter:drop-shadow(0 2px 8px rgba(201,164,73,.35));}
+.sidebar-house{font-family:var(--serif-display);font-size:11px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;text-align:center;font-weight:600;margin-bottom:4px;}
+.sidebar-seat{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);text-align:center;}
+.sidebar-members{padding:16px 0;}
+.sidebar-member{display:block;padding:11px 24px;text-decoration:none;transition:background .2s;border-left:2px solid transparent;position:relative;}
+.sidebar-member:hover,.sidebar-member.active{background:rgba(30,58,138,.30);border-left-color:var(--gold-bright);}
+.sidebar-member-name{font-family:var(--serif-display);font-size:11.5px;letter-spacing:.12em;color:var(--cream);text-transform:uppercase;font-weight:500;display:block;line-height:1.3;}
+.sidebar-member-meta{font-family:var(--serif-italic);font-style:italic;font-size:12px;color:var(--gold-deep);display:flex;gap:8px;align-items:center;margin-top:2px;}
+.sidebar-member-meta .age{color:var(--gold-bright);font-style:normal;font-family:var(--serif-display);font-size:10px;letter-spacing:.15em;}
+.main{flex:1;max-width:880px;padding:0 48px 80px;}
+.chrome{position:sticky;top:0;background:linear-gradient(180deg,var(--ink) 0%,var(--ink-soft) 100%);border-bottom:1px solid rgba(201,164,73,.30);padding:18px 0;display:flex;justify-content:space-between;align-items:center;z-index:50;backdrop-filter:blur(8px);}
+.chrome-title{font-family:var(--serif-display);font-size:13px;letter-spacing:.35em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;}
+.chrome-nav{display:flex;gap:28px;font-family:var(--serif-display);font-size:11px;letter-spacing:.25em;color:var(--cream-dim);text-transform:uppercase;}
+.chrome-nav a{color:var(--cream-dim);text-decoration:none;transition:color .3s;}.chrome-nav a:hover{color:var(--gold-bright);}
+.hero{padding:70px 0 60px;display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center;}
+.house-mark{display:inline-flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:28px;}
+.hero .g-mark{width:50px;height:50px;font-size:30px;filter:drop-shadow(0 2px 8px rgba(201,164,73,.45));}
+.house-line{font-family:var(--serif-display);font-size:11px;letter-spacing:.42em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;}
+.given-name{font-family:var(--serif-display);font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:.02em;color:var(--cream);line-height:.95;margin-bottom:6px;text-transform:uppercase;}
+.house-name{font-family:var(--serif-italic);font-size:clamp(24px,3.5vw,38px);font-weight:400;font-style:italic;color:var(--gold-bright);letter-spacing:.04em;margin-bottom:14px;}
+.epithet{display:inline-block;font-family:var(--serif-display);font-size:12px;letter-spacing:.4em;color:var(--gold-bright);text-transform:uppercase;padding:8px 0;border-top:1px solid rgba(201,164,73,.55);border-bottom:1px solid rgba(201,164,73,.55);margin:16px 0 28px;font-weight:500;}
+.titles{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+.title-pill{font-family:var(--serif-display);font-size:9.5px;letter-spacing:.28em;color:var(--gold-bright);text-transform:uppercase;padding:7px 14px;border:1px solid rgba(201,164,73,.45);background:rgba(30,58,138,.18);font-weight:500;}
+.title-pill.primary{border-color:var(--gold-bright);background:rgba(201,164,73,.12);color:var(--gold-bright);}
+.epigraph{font-family:var(--serif-italic);font-style:italic;font-size:19px;line-height:1.5;color:var(--cream-dim);padding-left:22px;border-left:2px solid var(--gold-bright);max-width:480px;}
+.hero-portrait{position:relative;border:1px solid rgba(201,164,73,.50);background:var(--ink-soft);padding:12px;box-shadow:0 0 0 1px rgba(201,164,73,.22),0 30px 80px -20px rgba(0,0,0,.85),inset 0 0 100px rgba(0,0,0,.5);}
+.hero-portrait::before,.hero-portrait::after{content:'';position:absolute;width:28px;height:28px;border:1.5px solid var(--gold-bright);}
+.hero-portrait::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.hero-portrait::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+.hero-portrait img{width:100%;display:block;filter:contrast(1.06) brightness(.97);}
+.vitals{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(201,164,73,.35);border-bottom:1px solid rgba(201,164,73,.35);margin:70px 0 0;}
+.vital{padding:26px 22px;text-align:center;border-right:1px solid rgba(201,164,73,.22);}.vital:last-child{border-right:none;}
+.vital-label{font-family:var(--serif-display);font-size:9px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:12px;font-weight:500;}
+.vital-value{font-family:var(--serif-italic);font-size:20px;color:var(--cream);font-style:italic;}
+.vital-value.large{font-size:28px;font-weight:500;font-family:var(--serif-display);font-style:normal;}
+.ornament{display:flex;align-items:center;gap:18px;margin:56px 0;}
+.ornament .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,164,73,.55),transparent);}
+.ornament .glyph{font-family:var(--serif-display);font-size:10px;color:var(--gold-bright);letter-spacing:.5em;flex-shrink:0;}
+.section-head{display:flex;align-items:baseline;gap:20px;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(201,164,73,.28);}
+.section-num{font-family:var(--serif-display);font-size:11px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;flex-shrink:0;}
+.section-title{font-family:var(--serif-display);font-size:20px;font-weight:600;letter-spacing:.12em;color:var(--cream);text-transform:uppercase;}
+.section-sub{font-family:var(--serif-italic);font-style:italic;font-size:15px;color:var(--cream-dim);margin-left:auto;}
+.body-text{font-family:var(--serif-body);font-size:17px;line-height:1.75;color:var(--cream-dim);margin-bottom:20px;}
+.body-text em{font-family:var(--serif-italic);font-style:italic;color:var(--cream);}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin-bottom:20px;}
+.gallery-item{border:1px solid rgba(201,164,73,.35);background:var(--ink-soft);padding:8px;}
+.gallery-item img{width:100%;display:block;filter:contrast(1.04) brightness(.96);}
+.gallery-caption{margin-top:10px;}
+.gallery-caption .label{font-family:var(--serif-display);font-size:9px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:4px;}
+.gallery-caption .desc{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);line-height:1.4;}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.rel-card{border:1px solid rgba(201,164,73,.28);background:linear-gradient(135deg,rgba(30,58,138,.14) 0%,rgba(14,26,58,.45) 100%);padding:24px 22px;}
+.rel-name{font-family:var(--serif-display);font-size:13px;letter-spacing:.18em;color:var(--cream);text-transform:uppercase;font-weight:600;margin-bottom:4px;}
+.rel-role{font-family:var(--serif-italic);font-style:italic;font-size:14px;color:var(--gold-bright);margin-bottom:10px;}
+.rel-text{font-family:var(--serif-body);font-size:15px;line-height:1.65;color:var(--cream-dim);}
+.attr-list{display:grid;grid-template-columns:110px 1fr;gap:14px 24px;margin-top:8px;}
+.attr-key{font-family:var(--serif-display);font-size:10px;letter-spacing:.25em;color:var(--gold-bright);text-transform:uppercase;padding-top:4px;font-weight:500;}
+.attr-val{font-family:var(--serif-body);color:var(--cream);font-size:16px;line-height:1.6;}
+.attr-val em{font-family:var(--serif-italic);color:var(--cream-dim);font-style:italic;}
+.encyc-footer{text-align:center;padding:60px 0 20px;border-top:1px solid rgba(201,164,73,.25);display:flex;flex-direction:column;align-items:center;gap:20px;}
+.footer-mark .g-mark{width:36px;height:36px;font-size:22px;opacity:.80;}
+.footer-text{display:flex;flex-direction:column;gap:8px;align-items:center;}
+.footer-text em{font-family:var(--serif-italic);font-style:italic;font-size:17px;color:var(--cream-dim);max-width:520px;text-align:center;line-height:1.5;}
+.footer-text .meta{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;margin-top:4px;}
+.mobile-back{display:none;}
+@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}.mobile-back{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(201,164,73,.25);transition:color .2s;}.mobile-back:hover{color:var(--gold-bright);}.chrome{padding-top:14px;}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <a href="galmir-vendrith.html" class="sidebar-back">← House Galmir · Vendrith</a>
+      <div class="sidebar-sigil"><div class="g-mark">G</div></div>
+      <div class="sidebar-house">Galmir · Vendrith</div><div class="sidebar-seat">Grandholm · Maia's Branch</div>
+    </div>
+    <div class="sidebar-members">
+      <a href="maia.html" class="sidebar-member"><span class="sidebar-member-name">Maia Galmir</span><span class="sidebar-member-meta"><span class="age">327</span><span>Matriarch · Sole Head of House</span></span></a>
+      <a href="david-vendrith.html" class="sidebar-member"><span class="sidebar-member-name">David Vendrith</span><span class="sidebar-member-meta"><span class="age">242</span><span>Consort · Grandholm</span></span></a>
+      <a href="maini.html" class="sidebar-member"><span class="sidebar-member-name">Maini Galmir</span><span class="sidebar-member-meta"><span class="age">87</span><span>Eldest Daughter · Dardena</span></span></a>
+      <a href="lyle-helsird.html" class="sidebar-member"><span class="sidebar-member-name">Lyle Helsird</span><span class="sidebar-member-meta"><span class="age">—</span><span>Maini's Husband · Dardena</span></span></a>
+      <a href="dixie.html" class="sidebar-member"><span class="sidebar-member-name">Dixenthra Vendrith</span><span class="sidebar-member-meta"><span class="age">86</span><span>Daughter · The Legion</span></span></a>
+      <a href="claudia.html" class="sidebar-member"><span class="sidebar-member-name">Claudia Galmir</span><span class="sidebar-member-meta"><span class="age">42</span><span>Daughter · Astravar Reach</span></span></a>
+      <a href="margaret.html" class="sidebar-member"><span class="sidebar-member-name">Margaret Vendrith</span><span class="sidebar-member-meta"><span class="age">39</span><span>Daughter · Martinhal</span></span></a>
+      <a href="sandy.html" class="sidebar-member"><span class="sidebar-member-name">Sandy Galmir</span><span class="sidebar-member-meta"><span class="age">37</span><span>Daughter · Rhill Thread</span></span></a>
+      <a href="jackie.html" class="sidebar-member"><span class="sidebar-member-name">Jackie Vendrith</span><span class="sidebar-member-meta"><span class="age">34</span><span>Daughter · Martial Thread</span></span></a>
+      <a href="holly.html" class="sidebar-member active"><span class="sidebar-member-name">Holly Galmir</span><span class="sidebar-member-meta"><span class="age">26</span><span>Daughter · Lessio's Future Wife</span></span></a>
+      <a href="daisy.html" class="sidebar-member"><span class="sidebar-member-name">Diazetta Galmir</span><span class="sidebar-member-meta"><span class="age">20</span><span>Granddaughter · Maini's Daughter</span></span></a>
+      <a href="doxin.html" class="sidebar-member"><span class="sidebar-member-name">Doxin Helsird</span><span class="sidebar-member-meta"><span class="age">19</span><span>Grandson · Maini's Son</span></span></a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <a href="galmir-vendrith.html" class="mobile-back">← House Galmir · Vendrith</a>
+    <div class="chrome">
+      <div class="chrome-title">The Lost Prince — Character Encyclopedia</div>
+      <div class="chrome-nav"><a href="index.html">Houses</a><a href="galmir-vendrith.html">Vendrith</a><span>Volume II</span></div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <div class="house-mark">
+          <div class="g-mark">G</div>
+          <div class="house-line">House Galmir · Vendrith</div>
+        </div>
+        <div class="given-name">Holly</div>
+        <div class="house-name">Galmir</div>
+        <div class="epithet">✦ The Royal House Thread</div>
+        <div class="titles">
+          <span class="title-pill primary">Lessio's Future Wife</span>
+          <span class="title-pill">Apex</span>
+          <span class="title-pill">Mother of Maitee</span>
+        </div>
+        <div class="epigraph">The youngest of Maia's daughters. The oldest of Maia's betrothals — arranged with House Locsird before the Rebirth returned. One of the good guys, not an antagonist to the kingdom, not a threat to the Crown. Politically aligned with Maia's machine. Socially dangerous by nature. The public eye is her native environment, not a register she performs.</div>
+      </div>
+      <div>
+        <div class="hero-portrait"><img src="Holly_Formal_1.JPG" alt="Holly Galmir"></div>
+      </div>
+    </div>
+
+    <div class="vitals">
+      <div class="vital"><div class="vital-label">Age</div><div class="vital-value large">26</div></div>
+      <div class="vital"><div class="vital-label">Branch</div><div class="vital-value">Vendrith</div></div>
+      <div class="vital"><div class="vital-label">Status</div><div class="vital-value">Betrothed · The Crown</div></div>
+      <div class="vital"><div class="vital-label">Role</div><div class="vital-value">The Wife</div></div>
+    </div>
+
+    <section>
+      <div class="section-head"><span class="section-num">I.</span><div class="section-title">Standing</div></div>
+      <p class="body-text"><em>The youngest of Maia Galmir's daughters. Apex. Betrothed since childhood to Lessio Locsird, the Rebirth. Future mother of Maitee Galmir — the daughter who will carry the Galmir name into the Royal Household.</em></p>
+      <p class="body-text">Her match precedes the cosmology. The arrangement between Maia and King Jonzhento was finalized long before Lessio was returned to the kingdom, back when Holly was a child and Lessio was a name that had been quietly translated into myth. The betrothal was never undone. When he came back, the arrangement was already in place.</p>
+      <p class="body-text">She is not an antagonist to the Royal House or to the kingdom. Canon is explicit on this. <em>One of the good guys.</em> Her one active opposition is Myrella Galmir — her cousin across the Azane/Vendrith branches, and the woman who occupies the territory Holly considers hers.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">II.</span><div class="section-title">Appearance</div></div>
+      <div class="attr-list">
+        <div class="attr-key">Hair</div>
+        <div class="attr-val">Blonde, wavy. Worn loose and down in formal, casual, and nightlife contexts. <em>High ponytail is the athletic register — the only setting in which she pulls it back.</em></div>
+        <div class="attr-key">Eyes</div>
+        <div class="attr-val">Blue.</div>
+        <div class="attr-key">Build</div>
+        <div class="attr-val">Tall, lean, athletic. Visibly strong without being overtly combat-coded. <em>The fitness of someone who trains in house colors and would not consider training out of them.</em></div>
+        <div class="attr-key">Expression</div>
+        <div class="attr-val">Composed, slightly guarded by default. Does not perform warmth when unobserved. The composure is always present — with one documented exception in the lab incident.</div>
+        <div class="attr-key">Wardrobe</div>
+        <div class="attr-val">Royal Blue, White, Gold across every register. Even her workout clothes carry the house monogram. <em>The colors are not ceremonial for her. They are identity. She wears them to train.</em></div>
+      </div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">III.</span><div class="section-title">Personality</div></div>
+      <p class="body-text">Intelligent, sharp, socially dangerous. <em>Thrives in public life</em> — magazines, events, gatherings, the high Apex social world. This is not a performance. The public eye is her native environment, and she finds genuine pleasure in it. Other characters who experience public life as a cost experience Holly inhabiting it as a gift.</p>
+      <p class="body-text">Politically aligned with Maia's machine. Her ambitions run through the Vendrith branch's standing in the kingdom. The elevation of her house, the prestige of her marriage, the political weight she will carry as Lessio's wife — these are the currencies she deals in, and she is literate in all of them.</p>
+      <p class="body-text">Composed by default, but the composure is <em>a structure she actively maintains</em>, not a baseline she rests on. Underneath the control there is something capable of breaking the surface without her permission. The lab scene in Bound by Blood is the single documented instance of it — an involuntary power release triggered by Myrella's chain-wife comment, <em>a reaction to profound insult, not an exposure of strategy.</em> The rebound hit Lessio, the person her entire presence in the room had been designed to protect. The irony was complete. It has not happened since.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">IV.</span><div class="section-title">The Arrangement — as Trophy</div></div>
+      <p class="body-text">Holly wants the marriage to Lessio. Her desire is unambiguous and uncomplicated. It is not emotional. It is not love-mapped. <em>It is prestige-driven — a trophy.</em> The arrangement represents status, political victory, the elevation of Maia's branch into direct Royal proximity. She does not need it to be more than that, and canon does not soften this.</p>
+      <p class="body-text">What she does with the arrangement, though, is more nuanced than the trophy framing implies. She understands that comfort with her is a prerequisite for what both of them have been asked to do. She understands that Lessio will not reach toward her — that physical constancy is the only viable method given who he is. So she builds toward him. She establishes proximity. She lets him use her presence as a grounding anchor (the heel-tap tic; she does not remove it from him, whether she has consciously observed it or simply noticed that proximity works).</p>
+      <p class="body-text">Ayravelle's read of Holly — recorded in Aurea-Lee's POV chapter — is the most accurate in-canon assessment:</p>
+      <div style="margin:28px 0;padding-left:22px;border-left:2px solid var(--gold-bright);font-family:var(--serif-italic);font-style:italic;font-size:17px;color:var(--cream-dim);line-height:1.55;">"She's been told to make him comfortable. To turn duty into familiarity. Every little touch is an order from someone else. She's trying to make it easier for him… even if it doesn't look like it."<br><br>"It is wrong. But not all wrong things are cruel."</div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">V.</span><div class="section-title">Dominance Architecture</div></div>
+      <p class="body-text">Holly's dominance instinct is <em>not directed at Lessio.</em> This distinction is canon and absolute. Where she channels it is threefold:</p>
+      <div class="attr-list">
+        <div class="attr-key">The Marriage</div>
+        <div class="attr-val">Territory. This is hers, and she intends to inhabit it fully — publicly, privately, politically.</div>
+        <div class="attr-key">Her Position</div>
+        <div class="attr-val">The architecture of her presence in his life. She is building toward being the person he reaches for when the world is loud. <em>Not through dominance of him, but through reliable proximity.</em></div>
+        <div class="attr-key">Myrella</div>
+        <div class="attr-val">Rival within the claimed space. Myrella exists inside Holly's territory, and Holly can feel that Myrella is closer to Lessio than she can reach through deliberate effort — <em>without being able to explain why.</em> She does not know about the arcane bond. She perceives the threat and cannot name it.</div>
+      </div>
+      <p class="body-text" style="margin-top:24px;">The canonical hard line: <em>Holly may hurt Myrella by every available means. She never directs that hostility toward Myrella's son.</em> This line does not break. When Myroth and Maitee grow up side by side in the Royal Household, they will consider themselves brother and sister without qualification — and Holly's treatment of Myroth will never be what breaks that bond.</p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">VI.</span><div class="section-title">The Gallery</div></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Holly_Formal_1.JPG" alt="Holly Galmir — formal">
+          <div class="gallery-caption"><div class="label">The Red Carpet</div><div class="desc">Global Diamond Foundation Gala. The public register at its peak. <em>Holly in her element — the cameras are the point, and she is not tolerating them.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Casual.PNG" alt="Holly Galmir — casual">
+          <div class="gallery-caption"><div class="label">Casual</div><div class="desc">White satin blouse, royal blue pleated skirt, blue heels. Even off-duty, full house palette. <em>The colors are not ceremonial. They are identity.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Athletic.PNG" alt="Holly Galmir — athletic">
+          <div class="gallery-caption"><div class="label">Athletic</div><div class="desc">High ponytail. House-color crop top and leggings with the Galmir monogram. Gold bracelet. <em>Polished even in workout clothes — performance-ready in every context.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Nightlife.PNG" alt="Holly Galmir — nightlife">
+          <div class="gallery-caption"><div class="label">Nightlife · Solo</div><div class="desc">The nightlife venue that is her territory. Royal blue and gold embroidered fitted dress. Composed and watchful — the private register when alone.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Lessio_Nightlife_Pose.PNG" alt="Holly and Lessio — nightlife pose">
+          <div class="gallery-caption"><div class="label">With Lessio · Pose</div><div class="desc">Both smiling. Lessio relaxed — genuinely present, not enduring. Hand at her waist. Her hand on his chest. <em>The warmer, later register of their dynamic.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Lessio_Nightlife_Kiss.PNG" alt="Holly and Lessio — nightlife kiss">
+          <div class="gallery-caption"><div class="label">With Lessio · Kiss</div><div class="desc">She kisses his cheek. He is still smiling, eyes open, at ease. The one context where something genuinely lighter appears on her face — the public eye combined with him beside her.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Myrella_Staredown.PNG" alt="Holly and Myrella — gym staredown">
+          <div class="gallery-caption"><div class="label">With Myrella · Staredown</div><div class="desc">Same gym. Same height. Neither backing down. Two relationships to power and identity in one frame — Holly polished, Myrella functional; Holly's Galmir monogram versus Myrella's Wings of Myrient.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Maitee_Galmir.PNG" alt="Holly with future daughter Maitee">
+          <div class="gallery-caption"><div class="label">With Maitee · Future</div><div class="desc">The daughter who will carry the Galmir name into the Royal Household. <em>A Novan — white hair, white eyes, no natural end to her lifespan.</em></div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">VII.</span><div class="section-title">Maitee — The Granddaughter Who Will Carry the Name</div></div>
+      <p class="body-text">Holly's daughter with Lessio. Her name — pronounced <em>My-tee</em> — is a phonetic echo of Maia, and an analogue of the word "mighty." The name honors Holly's mother, Maitee's grandmother, through sound alone.</p>
+      <p class="body-text">Maitee will carry the <em>Galmir</em> name. The Royal House's naming rule — the Crown supersedes all other houses — runs through Holly's surname, and Holly is a Galmir. This is the second slot of the alternating convention as it operates across Lessio's children: Myroth carries Locsird (first, as the Blood Child), and Maitee carries Galmir (second, by the same logic).</p>
+      <p class="body-text">Maitee is a Novan. White hair, white eyes, white arcane output. Arcane essence expressing all frequencies simultaneously — analogous to white light. No natural end to her lifespan; she can only be killed in battle. She and her half-brother Myroth share a twin-like bond, raised as sister and brother without qualification, with unified hostility toward anyone citing the half-sibling technicality.</p>
+      <p class="body-text"><em>Maia is quietly, privately, permanently pleased by the outcome. The cosmically-significant Blood Child is a Locsird. The Galmir name survives into the Royal Household through her own granddaughter.</em></p>
+    </section>
+
+    <div class="ornament"><span class="line"></span><span class="glyph">✦ ✦ ✦</span><span class="line"></span></div>
+
+    <section>
+      <div class="section-head"><span class="section-num">VIII.</span><div class="section-title">Relations</div></div>
+      <div class="rel-grid">
+        <div class="rel-card">
+          <div class="rel-name">Lessio Locsird</div>
+          <div class="rel-role">Future Husband · The Rebirth</div>
+          <div class="rel-text">The trophy. Also, increasingly and without fanfare, the person beside her in nightlife photographs with a genuinely unguarded smile. The arrangement is prestige-driven on her end, but the building-toward-him work is producing something with its own small warmth. Holly thrives in exactly the settings that cost him most — this tension will need to find equilibrium across the series, or it will not hold.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="maia.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);">Maia Galmir</a></div>
+          <div class="rel-role">Mother · The Architect</div>
+          <div class="rel-text">The arrangement was Maia's oldest betrothal, negotiated with Jonzhento decades before the Rebirth returned. Holly is politically aligned with her mother's machine completely. <em>Their ambitions are the same ambitions, pointed at the same crown.</em></div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name">Myrella Galmir</div>
+          <div class="rel-role">Cousin · Rival</div>
+          <div class="rel-text">The woman who occupies the territory Holly claimed. Cousin across the Azane/Vendrith branches. The family rivalry predates Lessio; the Blood Child arrangement only sharpened an existing fault line into direct personal conflict. <em>Holly has no awareness of the arcane bond between Myrella and Lessio.</em> She reads Myrella as a threat instinctively without being able to name the source.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name">Maitee Galmir</div>
+          <div class="rel-role">Future Daughter · The Granddaughter with the Name</div>
+          <div class="rel-text">The daughter whose name echoes Maia's. Novan. White-eyed. No natural lifespan. The granddaughter who carries the Galmir name into the Royal House — the outcome Maia is quietly pleased by.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name">Myroth Locsird</div>
+          <div class="rel-role">Stepson · Maitee's Brother</div>
+          <div class="rel-text">Myrella's son with Lessio. The Blood Child. Holly's absolute hard line — she will undermine Myrella at every opportunity and never once direct that hostility toward him. The line does not break. Myroth and Maitee grow up as brother and sister without qualification.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="maini.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);">Maini Galmir</a></div>
+          <div class="rel-role">Sister · Eldest</div>
+          <div class="rel-text">87 to her 26 — a sixty-year gap. The relationship is warm without being particularly close; Maini's life in Dardena and Holly's life in the public eye operate on different wavelengths.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="claudia.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);">Claudia Galmir</a></div>
+          <div class="rel-role">Sister · Astravar-Bound</div>
+          <div class="rel-text">The sister most politically comparable to Holly. Both carry dominant social presence, both will run their own marriages. Claudia's thread reaches outward into Astravar; Holly's reaches upward into the Crown.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name"><a href="sandy.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);">Sandy Galmir</a></div>
+          <div class="rel-role">Sister · Closest in Register</div>
+          <div class="rel-text">Eleven years older. Sandy's lighter-touch life makes her the least heavily loaded of Holly's sisters. They get along.</div>
+        </div>
+        <div class="rel-card">
+          <div class="rel-name">Ayravelle Locsird</div>
+          <div class="rel-role">Future Sister-in-Law · The Reader</div>
+          <div class="rel-text">The princess who has accurately described Holly's approach to Lessio better than anyone else in the canon. Holly does not dislike Ayravelle. <em>She is aware that Ayravelle has seen her clearly and has not weaponized what she saw.</em> That is rare.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="encyc-footer">
+      <div class="footer-mark"><div class="g-mark">G</div></div>
+      <div class="footer-text">
+        <em>"It is wrong. But not all wrong things are cruel."</em>
+        <span class="meta">Character Encyclopedia · Volume II · House Galmir · Vendrith</span>
+      </div>
+    </footer>
+  </div>
+</div>
+<div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(5,8,20,0.95); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
+  <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(201,164,73,0.50); box-shadow:0 0 0 1px rgba(201,164,73,0.22), 0 40px 100px -20px rgba(0,0,0,0.9);">
+</div>
+<script>
+  (function() {
+    var overlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img.id === 'lightbox-img') return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        e.preventDefault();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.style.display = 'flex';
+      });
+    });
+    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.style.display = 'none';
+    });
+  })();
+</script>
+</body>
+</html>
