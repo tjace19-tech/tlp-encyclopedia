@@ -701,19 +701,42 @@ body::after {
         <div class="house-card-members">Coming Soon</div>
       </div>
 
-      <!-- LOCKED: House Martial -->
-      <div class="house-card locked">
-        <div class="lock-icon">🔒</div>
+      <!-- ACTIVE: House Martial -->
+      <a href="martial.html" class="house-card">
+        <div class="house-card-corner tl"></div>
+        <div class="house-card-corner br"></div>
         <div class="house-card-sigil">
+          <!-- House Martial master sigil: crowned spear on split crimson/black field -->
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="20" height="20" stroke="#c9a449" stroke-width="1" fill="rgba(201,164,73,0.08)" transform="rotate(45 20 20)"/>
+            <defs>
+              <clipPath id="shieldClipMartial">
+                <path d="M20 3 L34 6 L34 23 Q34 32 20 37 Q6 32 6 23 L6 6 Z"/>
+              </clipPath>
+            </defs>
+            <!-- Left half crimson -->
+            <rect x="6" y="3" width="14" height="34" fill="#8b1a1a" clip-path="url(#shieldClipMartial)" opacity="0.85"/>
+            <!-- Right half ink -->
+            <rect x="20" y="3" width="14" height="34" fill="#0a0606" clip-path="url(#shieldClipMartial)" opacity="0.95"/>
+            <!-- Shield outline -->
+            <path d="M20 3 L34 6 L34 23 Q34 32 20 37 Q6 32 6 23 L6 6 Z"
+                  stroke="#c9a449" stroke-width="1.1" fill="none"/>
+            <!-- Center divider -->
+            <line x1="20" y1="3" x2="20" y2="37" stroke="#c9a449" stroke-width="0.4" opacity="0.5"/>
+            <!-- Spear shaft -->
+            <line x1="20" y1="13.5" x2="20" y2="31" stroke="#c9a449" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- Spearhead -->
+            <path d="M20 10.5 L21.6 14.8 L20 13.8 L18.4 14.8 Z" fill="#c9a449" stroke="#c9a449" stroke-width="0.5" stroke-linejoin="round"/>
+            <!-- Crown -->
+            <path d="M17 9 L17 7 L18 8 L19 6 L20 8 L21 6 L22 8 L23 7 L23 9 Z"
+                  fill="#c9a449" stroke="#c9a449" stroke-width="0.4" stroke-linejoin="round" opacity="0.95"/>
           </svg>
         </div>
         <div class="house-card-name">House Martial</div>
         <div class="house-card-sub">Martial Province · Three Factions</div>
-        <div class="house-card-desc">The three Martial factions. A family built on conditioning, combat, and the oldest power structures in Gemlyria's southwest.</div>
-        <div class="house-card-members">Coming Soon</div>
-      </div>
+        <div class="house-card-desc">The three Martial factions held under one will. A family built on conditioning, combat, and the oldest concentrated Apex power in Gemlyria's southwest.</div>
+        <div class="house-card-members">7 Members · Faction III · Chronicle One</div>
+        <div class="house-card-enter">Enter →</div>
+      </a>
 
       <!-- LOCKED: Province of Rue / Rhill -->
       <div class="house-card locked">
