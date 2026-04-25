@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Locsird-Stellgaze — The Lost Prince Character Encyclopedia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Forum&display=swap" rel="stylesheet">
+<style>
+:root {
+  --midnight: #050817;
+  --midnight-deep: #020410;
+  --indigo: #0d1230;
+  --indigo-deep: #060a20;
+  --indigo-bright: #1a2155;
+  --cosmic-gold: #c9a449;
+  --cosmic-gold-bright: #e8c873;
+  --cosmic-gold-deep: #8b6f2c;
+  --starlight: #e8e4f0;
+  --silver: #c8c4d8;
+  --silver-dim: #8a87a0;
+  --cream: #f4ecdc;
+  --cream-dim: #d4cdb6;
+  --cream-deep: #a99c80;
+  --ink: var(--midnight);
+  --ink-soft: var(--indigo);
+  --serif-display: 'Cinzel', serif;
+  --serif-body: 'EB Garamond', serif;
+  --serif-italic: 'Cormorant Garamond', serif;
+  --serif-roman: 'Forum', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--midnight);
+  color: var(--cream);
+  font-family: var(--serif-body);
+  font-size: 17px;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Cosmic backdrop — layered radial gradients suggesting nebulae and deep space */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse at 18% 22%, rgba(74, 50, 140, 0.32) 0%, transparent 38%),
+    radial-gradient(ellipse at 82% 68%, rgba(40, 30, 90, 0.38) 0%, transparent 45%),
+    radial-gradient(ellipse at 55% 95%, rgba(20, 15, 55, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 12%, rgba(120, 80, 180, 0.18) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Starfield — CSS-generated stars at multiple layers, static placement that appears scattered */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    /* Tiny far stars */
+    radial-gradient(1px 1px at 23px 47px, rgba(232,228,240,0.9), transparent),
+    radial-gradient(1px 1px at 89px 156px, rgba(232,228,240,0.8), transparent),
+    radial-gradient(1px 1px at 167px 78px, rgba(232,228,240,0.6), transparent),
+    radial-gradient(1px 1px at 245px 233px, rgba(232,228,240,0.85), transparent),
+    radial-gradient(1px 1px at 312px 122px, rgba(232,228,240,0.7), transparent),
+    radial-gradient(1px 1px at 398px 312px, rgba(232,228,240,0.9), transparent),
+    radial-gradient(1px 1px at 467px 89px, rgba(232,228,240,0.6), transparent),
+    radial-gradient(1px 1px at 534px 267px, rgba(232,228,240,0.8), transparent),
+    radial-gradient(1px 1px at 612px 178px, rgba(232,228,240,0.75), transparent),
+    radial-gradient(1px 1px at 689px 334px, rgba(232,228,240,0.6), transparent),
+    /* Slightly larger middle stars */
+    radial-gradient(1.5px 1.5px at 134px 289px, rgba(232,228,240,1), transparent),
+    radial-gradient(1.5px 1.5px at 423px 156px, rgba(232,228,240,0.95), transparent),
+    radial-gradient(1.5px 1.5px at 567px 67px, rgba(232,228,240,0.9), transparent),
+    radial-gradient(1.5px 1.5px at 723px 245px, rgba(232,228,240,0.85), transparent),
+    /* Gold stars — sparse, larger */
+    radial-gradient(2px 2px at 278px 200px, rgba(232, 200, 115, 0.95), transparent),
+    radial-gradient(2px 2px at 656px 134px, rgba(232, 200, 115, 0.9), transparent);
+  background-size: 800px 400px;
+  background-repeat: repeat;
+  opacity: 0.85;
+}
+
+.app {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
+}
+
+/* ── CHROME ── */
+.chrome {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(5, 8, 23, 0.96) 0%, rgba(13, 18, 48, 0.92) 100%);
+  border-bottom: 1px solid rgba(201, 164, 73, 0.28);
+  padding: 18px 32px;
+  margin: 0 -32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+}
+
+.chrome-title {
+  font-family: var(--serif-display);
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  color: var(--cosmic-gold);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.chrome-nav {
+  display: flex;
+  gap: 28px;
+  font-family: var(--serif-display);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--silver);
+  text-transform: uppercase;
+}
+
+.chrome-nav a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.chrome-nav a:hover { color: var(--cosmic-gold-bright); }
+
+/* ── MASTHEAD ── */
+.masthead {
+  text-align: center;
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.masthead-eyebrow {
+  font-family: var(--serif-display);
+  font-size: 11px;
+  letter-spacing: 0.5em;
+  color: var(--cosmic-gold);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.masthead-sigil {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.masthead-sigil svg {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 22px rgba(201, 164, 73, 0.55)) drop-shadow(0 0 6px rgba(232, 228, 240, 0.3));
+  animation: stellarPulse 6s ease-in-out infinite;
+}
+
+@keyframes stellarPulse {
+  0%, 100% { filter: drop-shadow(0 0 22px rgba(201, 164, 73, 0.55)) drop-shadow(0 0 6px rgba(232, 228, 240, 0.3)); }
+  50% { filter: drop-shadow(0 0 38px rgba(201, 164, 73, 0.85)) drop-shadow(0 0 14px rgba(232, 228, 240, 0.55)); }
+}
+
+.masthead-title {
+  font-family: var(--serif-display);
+  font-size: clamp(36px, 6.5vw, 72px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.masthead-subtitle {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 30px);
+  color: var(--cosmic-gold);
+  letter-spacing: 0.06em;
+  margin-bottom: 32px;
+}
+
+.masthead-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.masthead-rule .line {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,164,73,0.6), transparent);
+}
+
+.masthead-rule .glyph {
+  font-family: var(--serif-display);
+  font-size: 10px;
+  color: var(--cosmic-gold);
+  letter-spacing: 0.4em;
+}
+
+.masthead-desc {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--cream-dim);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── CONSTELLATION ORNAMENT (replaces ◆ ◆ ◆) ── */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 60px 0;
+}
+
+.ornament .line {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,164,73,0.5), transparent);
+}
+
+.ornament .constellation {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ornament .constellation svg {
+  width: 60px;
+  height: 16px;
+  opacity: 0.85;
+}
+
+/* ── PROSE SECTIONS ── */
+.prose-section { margin-bottom: 56px; }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(201, 164, 73, 0.22);
+  flex-wrap: wrap;
+}
+
+.section-num {
+  font-family: var(--serif-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cosmic-gold);
+  letter-spacing: 0.18em;
+}
+
+.section-title {
+  font-family: var(--serif-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--cream);
+  text-transform: uppercase;
+}
+
+.section-sub {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--cosmic-gold);
+  letter-spacing: 0.04em;
+  margin-left: auto;
+}
+
+.prose-section p {
+  margin-bottom: 18px;
+  color: var(--cream-dim);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.prose-section .lede {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 21px;
+  color: var(--cream);
+  line-height: 1.55;
+  margin-bottom: 28px;
+  border-left: 2px solid var(--cosmic-gold);
+  padding-left: 22px;
+}
+
+.prose-section em { color: var(--cosmic-gold-bright); font-style: italic; }
+
+/* ── ASTRAVAR PANORAMA STRIP ── */
+.panorama-strip {
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.panorama-frame {
+  border: 1px solid rgba(201, 164, 73, 0.4);
+  background: var(--midnight-deep);
+  padding: 6px;
+  position: relative;
+  box-shadow: 0 20px 50px -20px rgba(0,0,0,0.9);
+}
+
+.panorama-frame img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.05) brightness(0.95);
+  cursor: zoom-in;
+}
+
+.panorama-caption {
+  text-align: center;
+  margin-top: 10px;
+  font-family: var(--serif-display);
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  color: var(--cosmic-gold);
+  text-transform: uppercase;
+}
+
+/* ── GROUP PORTRAIT ── */
+.group-section { margin: 60px 0; }
+
+.group-section .group-eyebrow {
+  text-align: center;
+  font-family: var(--serif-display);
+  font-size: 10px;
+  letter-spacing: 0.45em;
+  color: var(--cosmic-gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.group-section .group-title {
+  text-align: center;
+  font-family: var(--serif-display);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--cream);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.group-section .group-sub {
+  text-align: center;
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--cosmic-gold);
+  margin-bottom: 30px;
+}
+
+.group-frame {
+  position: relative;
+  border: 1px solid rgba(201, 164, 73, 0.6);
+  background: var(--midnight-deep);
+  padding: 10px;
+  box-shadow:
+    0 0 0 1px rgba(201, 164, 73, 0.25),
+    0 30px 80px -20px rgba(0,0,0,0.95),
+    0 0 60px -20px rgba(74, 50, 140, 0.4);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.group-frame::before, .group-frame::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid var(--cosmic-gold);
+}
+
+.group-frame::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.group-frame::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+.group-frame img {
+  width: 100%;
+  display: block;
+  filter: contrast(1.05) brightness(0.96);
+  cursor: zoom-in;
+}
+
+.group-caption {
+  text-align: center;
+  margin-top: 14px;
+  font-family: var(--serif-display);
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  color: var(--cosmic-gold);
+  text-transform: uppercase;
+}
+
+.group-caption .note {
+  display: block;
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--cream-deep);
+  letter-spacing: 0.04em;
+  margin-top: 6px;
+  text-transform: none;
+}
+
+/* ── VITALS ── */
+.vitals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(201, 164, 73, 0.40);
+  border-bottom: 1px solid rgba(201, 164, 73, 0.40);
+  margin: 50px 0;
+}
+
+.vital {
+  padding: 22px 16px;
+  text-align: center;
+  border-right: 1px solid rgba(201, 164, 73, 0.22);
+}
+
+.vital:last-child { border-right: none; }
+
+.vital-label {
+  font-family: var(--serif-display);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: var(--cosmic-gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.vital-value {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--cream);
+}
+
+/* ── MEMBERS ── */
+.members-section { margin: 50px 0 30px; }
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.family-card {
+  position: relative;
+  background: var(--indigo-deep);
+  border: 1px solid rgba(201, 164, 73, 0.28);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
+  overflow: hidden;
+  display: block;
+}
+
+.family-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cosmic-gold);
+  box-shadow: 0 20px 50px -20px rgba(0,0,0,0.9), 0 0 0 1px rgba(201,164,73,0.4), 0 0 30px -10px rgba(201,164,73,0.3);
+}
+
+.family-card.pending { cursor: default; }
+.family-card.pending:hover {
+  transform: none;
+  border-color: rgba(201, 164, 73, 0.28);
+  box-shadow: none;
+}
+
+.family-card-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--midnight);
+}
+
+.family-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.6s;
+  filter: contrast(1.05) brightness(0.97);
+}
+
+.family-card:not(.pending):hover .family-card-img img {
+  transform: scale(1.04);
+}
+
+.portrait-pending {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background:
+    radial-gradient(ellipse at center, rgba(40, 30, 90, 0.45) 0%, rgba(5, 8, 23, 0.85) 70%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(201,164,73,0.05) 0px,
+      rgba(201,164,73,0.05) 2px,
+      transparent 2px,
+      transparent 14px
+    );
+  position: relative;
+}
+
+.portrait-pending::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 30% 25%, rgba(232,228,240,0.6), transparent),
+    radial-gradient(1px 1px at 60% 60%, rgba(232,228,240,0.5), transparent),
+    radial-gradient(1px 1px at 75% 35%, rgba(232,228,240,0.55), transparent),
+    radial-gradient(1px 1px at 20% 70%, rgba(232,228,240,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 50% 45%, rgba(232,200,115,0.7), transparent);
+  pointer-events: none;
+}
+
+.portrait-pending .pending-mark {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--cream);
+  border: 1px solid rgba(201, 164, 73, 0.55);
+  border-radius: 50%;
+  background: rgba(13, 18, 48, 0.7);
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.portrait-pending .pending-label {
+  font-family: var(--serif-display);
+  font-size: 8.5px;
+  letter-spacing: 0.32em;
+  color: var(--cosmic-gold);
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.portrait-pending .pending-sub {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 11px;
+  color: var(--cream-deep);
+  text-align: center;
+  margin-top: 2px;
+  max-width: 160px;
+  line-height: 1.3;
+  z-index: 1;
+}
+
+.family-card-body {
+  padding: 16px 18px 18px;
+}
+
+.family-card-name {
+  font-family: var(--serif-display);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--cream);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.family-card-role {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--cosmic-gold-bright);
+  margin-bottom: 6px;
+}
+
+.family-card-age {
+  font-family: var(--serif-display);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  color: var(--silver);
+  text-transform: uppercase;
+}
+
+/* ── FOOTER ── */
+.encyc-footer {
+  text-align: center;
+  padding: 60px 0 20px;
+  border-top: 1px solid rgba(201, 164, 73, 0.20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.footer-sigil svg {
+  width: 44px;
+  height: 44px;
+  opacity: 0.75;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.footer-text em {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--cream-dim);
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.footer-text .meta {
+  display: block;
+  font-family: var(--serif-display);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--cosmic-gold-deep);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 24px 0 0;
+  font-family: var(--serif-display);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--cosmic-gold);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-link:hover { color: var(--cosmic-gold-bright); }
+
+@media (max-width: 768px) {
+  .app { padding: 0 18px 60px; }
+  .chrome { padding: 14px 18px; margin: 0 -18px 0; }
+  .chrome-nav { display: none; }
+  .masthead { padding: 50px 0 40px; }
+  .vitals { grid-template-columns: repeat(2, 1fr); }
+  .family-grid { grid-template-columns: repeat(2, 1fr); }
+  .panorama-strip { grid-template-columns: 1fr; }
+  .panorama-frame img { height: 180px; }
+  .section-sub { margin-left: 0; flex-basis: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Chrome -->
+  <div class="chrome">
+    <div class="chrome-title">House Locsird-Stellgaze — The Lost Prince</div>
+    <div class="chrome-nav">
+      <a href="index.html">← All Houses</a>
+      <span>Astravar</span>
+      <span>Chronicle One</span>
+    </div>
+  </div>
+
+  <!-- Masthead -->
+  <div class="masthead">
+    <div class="masthead-eyebrow">Astravar · The Prophetic Line · The Second Locsird Seat</div>
+
+    <div class="masthead-sigil">
+      <!-- Stellgaze sigil: gold star (the Locsird star reinterpreted in cosmic register), with a constellation orbit ring -->
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring -->
+        <circle cx="40" cy="40" r="34" stroke="rgba(201,164,73,0.25)" stroke-width="0.7" fill="none"/>
+        <!-- Inner orbit ring with star nodes (constellation suggestion) -->
+        <circle cx="40" cy="40" r="26" stroke="rgba(201,164,73,0.4)" stroke-width="0.5" fill="none" stroke-dasharray="2 4"/>
+        <!-- Star nodes on the orbit -->
+        <circle cx="40" cy="14" r="1.2" fill="#e8c873"/>
+        <circle cx="62" cy="33" r="1" fill="#e8e4f0"/>
+        <circle cx="56" cy="60" r="1" fill="#e8e4f0"/>
+        <circle cx="20" cy="56" r="1" fill="#e8e4f0"/>
+        <circle cx="17" cy="28" r="1.2" fill="#e8c873"/>
+        <!-- Central star — gold, multi-point with elongated bottom point (Locsird star canon) -->
+        <path d="M40 22 L43 36 L52 38 L43 42 L40 56 L37 42 L28 38 L37 36 Z M40 56 L40 64"
+              fill="#c9a449" stroke="#e8c873" stroke-width="0.6" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="masthead-title">Locsird-Stellgaze</div>
+    <div class="masthead-subtitle">The Matriarch · The Far-Seeing · The City Beneath the Stars</div>
+
+    <div class="masthead-rule">
+      <span class="line"></span>
+      <span class="glyph">✦ ✶ ✦</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="masthead-desc">
+      Maraveth Stellgaze hears the room and something underneath it. Her seat is at Astravar, the gothic city on the western coast where the curtain wall has stood broken for over a hundred years and no one has rebuilt it. The line is older than Gemlyria. The line was Lornavek before it was anything else.
+    </div>
+  </div>
+
+  <!-- Constellation ornament -->
+  <div class="ornament">
+    <span class="line"></span>
+    <span class="constellation">
+      <svg viewBox="0 0 60 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="6" y1="8" x2="22" y2="4" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <line x1="22" y1="4" x2="38" y2="11" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <line x1="38" y1="11" x2="54" y2="6" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <circle cx="6" cy="8" r="1.2" fill="#c9a449"/>
+        <circle cx="22" cy="4" r="1.5" fill="#e8c873"/>
+        <circle cx="38" cy="11" r="1.3" fill="#e8e4f0"/>
+        <circle cx="54" cy="6" r="1.4" fill="#c9a449"/>
+      </svg>
+    </span>
+    <span class="line"></span>
+  </div>
+
+  <!-- I. The House -->
+  <section class="prose-section">
+    <div class="section-head">
+      <span class="section-num">I.</span>
+      <div class="section-title">The House</div>
+      <div class="section-sub">Older than the kingdom that contains it.</div>
+    </div>
+
+    <p class="lede">House Stellgaze was Lornavek before Gemlyria was Gemlyria. The line predates the modern kingdom, predates the council, predates most of what calls itself ancient. The Stellgaze women have been reading the stars and writing what they see for longer than any other family on the continent has existed.</p>
+
+    <p>The marriage to House Locsird is comparatively recent. Rhyzen Locsird is the King's brother — younger by five years, older by no other measure — and when he wed Maraveth Stellgaze, the older line absorbed the younger. <em>Stellgaze is dominant in the alternation.</em> Children of the union take the Stellgaze name first and the Locsird name second, by birth order. Calistra Stellgaze. Dravik Locsird. Soryn Stellgaze. The pattern is exact.</p>
+
+    <p>Rhyzen holds the council seat that represents the family Locsird line — a seat distinct from his brother's crown. The two seats often vote together. They have sometimes voted apart. The house has never made a secret of when they disagree. It is one of the things Rhyzen is known for.</p>
+
+    <p>What Maraveth is known for is harder to name in plain language. She sees forward. She does not always say what she sees. The rest of the council has learned what to do when she opens her mouth and what to do when she does not.</p>
+  </section>
+
+  <!-- Astravar panorama strip -->
+  <div class="panorama-strip">
+    <div class="panorama-frame">
+      <img src="Astravar_Tower_View.png" alt="View from a tower over Astravar at night">
+      <div class="panorama-caption">Astravar from the High Tower · Night</div>
+    </div>
+    <div class="panorama-frame">
+      <img src="Astravar_Crumbled_Wall.png" alt="Astravar from the sea, the breach in the wall visible">
+      <div class="panorama-caption">The Breach · Never Repaired</div>
+    </div>
+  </div>
+
+  <!-- II. The Doctrine -->
+  <section class="prose-section">
+    <div class="section-head">
+      <span class="section-num">II.</span>
+      <div class="section-title">The Doctrine</div>
+      <div class="section-sub">The cosmos worn deliberately.</div>
+    </div>
+
+    <p>House Locsird-Stellgaze keeps one register and keeps it everywhere. There is no ceremonial-versus-tactical split. There is no soft house color and a different battle palette. Stellgaze women wear the cosmos at state functions and they wear the cosmos at war. The midnight base, the cosmic gold, the silver-white starlight — these are the colors of the house in every context. The armor depicts actual galaxies. The gowns trace actual constellations. <em>It is the same statement, made twice.</em></p>
+
+    <p>The tattoos are part of the house. Every adult Stellgaze carries constellation work on their arms, often extending to the chest, neck, and hands. The patterns are personal — each woman's tattoos map to her own birth chart, the night she was born, the stars that were overhead at the moment she opened her eyes — but the tradition is universal within the line. Calistra carries Maraveth's lineage in her ink. Soryn will carry it in hers. Dravik carries a partial register on his neck and hands, modified for a Locsird-named son raised in Astravar.</p>
+
+    <p>The doctrine is older than the modern kingdom. It is older than the council seat. It is older than the curtain wall. <em>Stellgaze warriors do not hide on the battlefield. They walk into war wearing the night sky and let the enemy understand what that means.</em></p>
+  </section>
+
+  <!-- Constellation ornament -->
+  <div class="ornament">
+    <span class="line"></span>
+    <span class="constellation">
+      <svg viewBox="0 0 60 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="6" y1="6" x2="22" y2="11" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <line x1="22" y1="11" x2="38" y2="4" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <line x1="38" y1="4" x2="54" y2="9" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <circle cx="6" cy="6" r="1.4" fill="#c9a449"/>
+        <circle cx="22" cy="11" r="1.2" fill="#e8e4f0"/>
+        <circle cx="38" cy="4" r="1.5" fill="#e8c873"/>
+        <circle cx="54" cy="9" r="1.3" fill="#c9a449"/>
+      </svg>
+    </span>
+    <span class="line"></span>
+  </div>
+
+  <!-- Family Group Portrait -->
+  <section class="group-section">
+    <div class="group-eyebrow">The Matriarch and the Heir</div>
+    <div class="group-title">Maraveth and Calistra</div>
+    <div class="group-sub">Two generations of Stellgaze, the constellations passed down in ink and gown.</div>
+
+    <div class="group-frame">
+      <img src="Maraveth_Stellgaze_Calistra_Stellgaze_Formal.png" alt="Maraveth Stellgaze and Calistra Stellgaze in formal house attire">
+    </div>
+    <div class="group-caption">
+      Maraveth Stellgaze · Calistra Stellgaze
+      <span class="note">The mother and the eldest daughter — both wearing the constellations that mark them, each in her own birth-chart ink.</span>
+    </div>
+  </section>
+
+  <!-- Vitals -->
+  <div class="vitals">
+    <div class="vital">
+      <div class="vital-label">Province</div>
+      <div class="vital-value">Astravar — The Coast</div>
+    </div>
+    <div class="vital">
+      <div class="vital-label">Council Seats</div>
+      <div class="vital-value">Two — Stellgaze · Locsird</div>
+    </div>
+    <div class="vital">
+      <div class="vital-label">House Colors</div>
+      <div class="vital-value">Midnight · Cosmic Gold · Silver</div>
+    </div>
+    <div class="vital">
+      <div class="vital-label">Members</div>
+      <div class="vital-value">5 · The Inner Family</div>
+    </div>
+  </div>
+
+  <!-- III. Astravar -->
+  <section class="prose-section">
+    <div class="section-head">
+      <span class="section-num">III.</span>
+      <div class="section-title">Astravar</div>
+      <div class="section-sub">The city that does not repair its scar.</div>
+    </div>
+
+    <p>Astravar sits at the mouth of the West River, on the western coast facing the sea between Gemlyria and West Island. It is a city of dark stone — gothic spires, pointed arches, gargoyles watching the harbor — built across a coastal headland and sealed behind a curtain wall that runs all the way to the water. From the high towers the entire city falls away in lit windows toward the breakwaters and the open sea.</p>
+
+    <p>One section of the wall has stood broken for over a century. Sonya-Lee Toraiyo, then a War Maker from West Island, briefly unleashed her full Apex potential during a civil conflict in the city — and a section of the great western curtain wall ceased to exist. The breach has never been repaired. <em>Not because no one could rebuild it. Because no one will.</em> It stands as scar and warning and memorial all at once. Among Astravar's people the breach is a dividing symbol — proof some survived the worst, reminder others have never atoned for it.</p>
+
+    <p>Before it was Astravar, the city was Lornavek. The Stellgaze line carries that older name privately. Nothing in the city's signage acknowledges it, but the family does, and so do the oldest people in the high towers who remember what the place was called when the modern map had not yet been drawn.</p>
+  </section>
+
+  <!-- Constellation ornament -->
+  <div class="ornament">
+    <span class="line"></span>
+    <span class="constellation">
+      <svg viewBox="0 0 60 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="9" x2="20" y2="3" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <line x1="20" y1="3" x2="32" y2="12" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <line x1="32" y1="12" x2="44" y2="5" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <line x1="44" y1="5" x2="54" y2="10" stroke="rgba(201,164,73,0.4)" stroke-width="0.4"/>
+        <circle cx="8" cy="9" r="1.2" fill="#e8e4f0"/>
+        <circle cx="20" cy="3" r="1.5" fill="#e8c873"/>
+        <circle cx="32" cy="12" r="1.3" fill="#c9a449"/>
+        <circle cx="44" cy="5" r="1.2" fill="#e8e4f0"/>
+        <circle cx="54" cy="10" r="1.4" fill="#c9a449"/>
+      </svg>
+    </span>
+    <span class="line"></span>
+  </div>
+
+  <!-- IV. The Family -->
+  <section class="members-section">
+    <div class="section-head">
+      <span class="section-num">IV.</span>
+      <div class="section-title">The Family</div>
+      <div class="section-sub">Select a member to view their full profile.</div>
+    </div>
+
+    <div class="family-grid">
+
+      <!-- ACTIVE: Maraveth -->
+      <a href="maraveth.html" class="family-card">
+        <div class="family-card-img">
+          <img src="Maraveth_Stellgaze_Formal.png" alt="Maraveth Stellgaze">
+        </div>
+        <div class="family-card-body">
+          <div class="family-card-name">Maraveth Stellgaze</div>
+          <div class="family-card-role">Matriarch · Council Seat · The Far-Seeing</div>
+          <div class="family-card-age">Age 672 · The Line Itself</div>
+        </div>
+      </a>
+
+      <!-- ACTIVE: Rhyzen -->
+      <a href="rhyzen.html" class="family-card">
+        <div class="family-card-img">
+          <img src="Rhyzen_Battle.JPEG" alt="Rhyzen Locsird">
+        </div>
+        <div class="family-card-body">
+          <div class="family-card-name">Rhyzen Locsird</div>
+          <div class="family-card-role">Council Seat · The King's Brother · The Sardonic</div>
+          <div class="family-card-age">Age 241 · Maraveth's Husband</div>
+        </div>
+      </a>
+
+      <!-- ACTIVE: Calistra -->
+      <a href="calistra.html" class="family-card">
+        <div class="family-card-img">
+          <img src="Calistra_Stellgaze_Formal.png" alt="Calistra Stellgaze">
+        </div>
+        <div class="family-card-body">
+          <div class="family-card-name">Calistra Stellgaze</div>
+          <div class="family-card-role">Eldest Daughter · The Heir to the Line</div>
+          <div class="family-card-age">Age 87 · Constellations of Her Own</div>
+        </div>
+      </a>
+
+      <!-- ACTIVE: Dravik -->
+      <a href="dravik.html" class="family-card">
+        <div class="family-card-img">
+          <img src="Dravik_Locsird_Formal.png" alt="Dravik Locsird">
+        </div>
+        <div class="family-card-body">
+          <div class="family-card-name">Dravik Locsird</div>
+          <div class="family-card-role">Soldier · Strategist · The Quiet</div>
+          <div class="family-card-age">Age 37 · A Locsird Raised in Astravar</div>
+        </div>
+      </a>
+
+      <!-- PENDING: Soryn -->
+      <a class="family-card pending">
+        <div class="family-card-img">
+          <div class="portrait-pending">
+            <div class="pending-mark">S</div>
+            <div class="pending-label">Portrait Pending</div>
+            <div class="pending-sub">Canon in Development</div>
+          </div>
+        </div>
+        <div class="family-card-body">
+          <div class="family-card-name">Soryn Stellgaze</div>
+          <div class="family-card-role">Youngest Daughter · The Last in the Alternation</div>
+          <div class="family-card-age">Age 35 · Stellgaze Name, Stellgaze Line</div>
+        </div>
+      </a>
+
+    </div>
+
+    <a href="index.html" class="back-link">← Return to all houses</a>
+  </section>
+
+  <!-- Final ornament -->
+  <div class="ornament">
+    <span class="line"></span>
+    <span class="constellation">
+      <svg viewBox="0 0 60 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="10" cy="8" r="1.4" fill="#c9a449"/>
+        <circle cx="30" cy="8" r="1.6" fill="#e8c873"/>
+        <circle cx="50" cy="8" r="1.4" fill="#c9a449"/>
+        <line x1="10" y1="8" x2="30" y2="8" stroke="rgba(201,164,73,0.3)" stroke-width="0.3"/>
+        <line x1="30" y1="8" x2="50" y2="8" stroke="rgba(201,164,73,0.3)" stroke-width="0.3"/>
+      </svg>
+    </span>
+    <span class="line"></span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="encyc-footer">
+    <div class="footer-sigil">
+      <svg viewBox="0 0 80 80" fill="none">
+        <circle cx="40" cy="40" r="34" stroke="rgba(201,164,73,0.25)" stroke-width="0.7" fill="none"/>
+        <circle cx="40" cy="40" r="26" stroke="rgba(201,164,73,0.4)" stroke-width="0.5" fill="none" stroke-dasharray="2 4"/>
+        <circle cx="40" cy="14" r="1.2" fill="#e8c873"/>
+        <circle cx="62" cy="33" r="1" fill="#e8e4f0"/>
+        <circle cx="56" cy="60" r="1" fill="#e8e4f0"/>
+        <circle cx="20" cy="56" r="1" fill="#e8e4f0"/>
+        <circle cx="17" cy="28" r="1.2" fill="#e8c873"/>
+        <path d="M40 22 L43 36 L52 38 L43 42 L40 56 L37 42 L28 38 L37 36 Z M40 56 L40 64"
+              fill="#c9a449" stroke="#e8c873" stroke-width="0.6" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="footer-text">
+      <em>"She hears the room and something underneath it. The council has learned to wait for her to speak — and learned what it means when she chooses not to."</em>
+      <span class="meta">House Locsird-Stellgaze · Character Encyclopedia · Volume II · The Lost Prince Series · Chronicle One</span>
+    </div>
+  </footer>
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(5,8,23,0.97); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
+  <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(201,164,73,0.5); box-shadow:0 0 0 1px rgba(201,164,73,0.25), 0 40px 100px -20px rgba(0,0,0,0.95);">
+</div>
+<script>
+  (function() {
+    var overlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img.id === 'lightbox-img') return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        e.preventDefault();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.style.display = 'flex';
+      });
+    });
+    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') overlay.style.display = 'none';
+    });
+  })();
+</script>
+
+</body>
+</html>
