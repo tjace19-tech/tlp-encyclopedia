@@ -38,7 +38,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .house-mark{display:inline-flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:28px;}
 .house-crown{width:50px;height:50px;}.house-crown svg{width:100%;height:100%;filter:drop-shadow(0 2px 8px rgba(201,164,73,.45));}
 .house-line{font-family:var(--serif-display);font-size:11px;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;font-weight:500;}
-.given-name { font-family: var(--serif-display); font-size: clamp(36px, 5vw, 64px); font-weight: 700; letter-spacing: 0.02em; color: var(--cream); line-height: 0.95; margin-bottom: 6px; text-transform: uppercase; }
+.given-name{font-family:var(--serif-display);font-size:clamp(36px,5.5vw,68px);font-weight:700;letter-spacing:.04em;color:var(--cream);line-height:.95;margin-bottom:6px;text-transform:uppercase;}
 .house-name{font-family:var(--serif-italic);font-size:clamp(24px,3.5vw,38px);font-weight:400;font-style:italic;color:var(--gold);letter-spacing:.04em;margin-bottom:14px;}
 .epithet{display:inline-block;font-family:var(--serif-display);font-size:12px;letter-spacing:.4em;color:var(--gold-bright);text-transform:uppercase;padding:8px 0;border-top:1px solid rgba(201,164,73,.5);border-bottom:1px solid rgba(201,164,73,.5);margin:16px 0 28px;font-weight:500;}
 .titles{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
@@ -85,8 +85,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .footer-text{display:flex;flex-direction:column;gap:8px;align-items:center;}
 .footer-text em{font-family:var(--serif-italic);font-style:italic;font-size:17px;color:var(--cream-dim);max-width:520px;text-align:center;line-height:1.5;}
 .footer-text .meta{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;margin-top:4px;}
-.mobile-back{display:none;}
-@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}.mobile-back{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(201,164,73,.18);transition:color .2s;}.mobile-back:hover{color:var(--gold);}.chrome{padding-top:14px;}}
+@media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}}
 </style>
 </head>
 <body>
@@ -113,7 +112,6 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   </nav>
 
   <div class="main">
-    <a href="royal-house.html" class="mobile-back">← House Locsird · Toraiyo</a>
     <div class="chrome">
       <div class="chrome-title">The Lost Prince — Character Encyclopedia</div>
       <div class="chrome-nav"><a href="index.html">Houses</a><a href="royal-house.html">Royal House</a><span>Volume II</span></div>
@@ -189,6 +187,14 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
           <img src="SonyaLee_Baby_Lessio_Book.PNG" alt="Sonya-Lee with baby Lessio — Reading">
           <div class="gallery-caption"><div class="label">With Lessio · Reading · Pre-Abduction</div><div class="desc">She leaned on Emerald's warmth because the Trials took from her the daily softness. This is what she still had. What she kept.</div></div>
         </div>
+        <div class="gallery-item">
+          <img src="SonyaLee_Lessio_Gemstone_Living_Room.PNG" alt="Sonya-Lee with Lessio — Present Day">
+          <div class="gallery-caption"><div class="label">With Lessio · Gemstone Living Room · Present Day</div><div class="desc">Fourteen years gone. A different Lessio. She holds what she has. The grief sits underneath both of them simultaneously.</div></div>
+        </div>
+        <div class="gallery-item">
+          <video src="Sonya_Video.mp4" autoplay loop muted playsinline preload="metadata" style="width:100%;display:block;filter:contrast(1.04) brightness(.96);" aria-label="Sonya-Lee in motion"></video>
+          <div class="gallery-caption"><div class="label">In Motion <span style="color:#c9a449;letter-spacing:.2em;font-size:8px;margin-left:6px;">▶ ANIMATED</span></div><div class="desc">A moment held — the marks visible, the composure visible, what moves underneath visible only in the way she carries it. <em>The War Maker, in her own register.</em></div></div>
+        </div>
       </div>
     </section>
 
@@ -198,7 +204,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
       <div class="section-head"><span class="section-num">III.</span><div class="section-title">Relations</div></div>
       <div class="rel-grid">
         <div class="rel-card">
-          <div class="rel-name"><a href="jonzhento.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,164,73,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#c9a449'" onmouseout="this.style.borderColor='rgba(201,164,73,0.4)'">Jonzhento Locsird</a></div>
+          <div class="rel-name">Jonzhento Locsird</div>
           <div class="rel-role">Husband · The Chosen Marriage</div>
           <div class="rel-text">He knew the stories before he knew her. He learned what she actually was upon meeting her. He has never asked about the marks. He continues to choose. The marriage succeeded in ways that were not expected of it — and that success is something they made, not something that was available to them by default.</div>
         </div>
@@ -239,29 +245,12 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     </footer>
   </div>
 </div>
-<div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(10,5,18,0.95); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
-  <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(201,164,73,0.45); box-shadow:0 0 0 1px rgba(201,164,73,0.2), 0 40px 100px -20px rgba(0,0,0,0.9);">
+<div id="lightbox-overlay" style="display:none;position:fixed;inset:0;background:rgba(10,5,18,0.96);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;padding:40px;">
+  <img id="lightbox-img" style="display:none;max-width:100%;max-height:100%;border:1px solid rgba(201,164,73,0.5);box-shadow:0 0 0 1px rgba(201,164,73,0.25),0 40px 100px -20px rgba(0,0,0,0.95);">
+  <video id="lightbox-video" style="display:none;max-width:100%;max-height:100%;border:1px solid rgba(201,164,73,0.5);box-shadow:0 0 0 1px rgba(201,164,73,0.25),0 40px 100px -20px rgba(0,0,0,0.95);cursor:default;" autoplay loop muted playsinline controls></video>
 </div>
 <script>
-  (function() {
-    var overlay = document.getElementById('lightbox-overlay');
-    var lightboxImg = document.getElementById('lightbox-img');
-    document.querySelectorAll('img').forEach(function(img) {
-      if (img.id === 'lightbox-img') return;
-      img.style.cursor = 'zoom-in';
-      img.addEventListener('click', function(e) {
-        e.preventDefault();
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        overlay.style.display = 'flex';
-      });
-    });
-    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') overlay.style.display = 'none';
-    });
-  })();
+(function(){var overlay=document.getElementById('lightbox-overlay');var lightboxImg=document.getElementById('lightbox-img');var lightboxVideo=document.getElementById('lightbox-video');function closeLightbox(){overlay.style.display='none';lightboxImg.style.display='none';lightboxVideo.style.display='none';lightboxVideo.pause();lightboxVideo.removeAttribute('src');lightboxVideo.load();}document.querySelectorAll('img').forEach(function(img){if(img.id==='lightbox-img')return;img.style.cursor='zoom-in';img.addEventListener('click',function(e){e.preventDefault();lightboxVideo.style.display='none';lightboxImg.style.display='block';lightboxImg.src=img.src;lightboxImg.alt=img.alt;overlay.style.display='flex';});});document.querySelectorAll('video').forEach(function(vid){if(vid.id==='lightbox-video')return;vid.style.cursor='zoom-in';vid.addEventListener('click',function(e){e.preventDefault();lightboxImg.style.display='none';lightboxVideo.style.display='block';lightboxVideo.src=vid.currentSrc||vid.src;lightboxVideo.load();lightboxVideo.play().catch(function(){});overlay.style.display='flex';});});overlay.addEventListener('click',function(e){if(e.target===lightboxVideo)return;closeLightbox();});document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});})();
 </script>
-
 </body>
 </html>
