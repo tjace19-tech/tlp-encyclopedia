@@ -581,6 +581,110 @@ body::after {
   color: var(--silver-deep);
 }
 
+/* Gallery sub-sections */
+.gallery-subhead {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 28px 0 14px;
+}
+.gallery-subhead:first-of-type { margin-top: 0; }
+.gallery-subhead .sub-num {
+  font-family: var(--serif-display);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--crimson);
+  text-transform: uppercase;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.gallery-subhead .sub-title {
+  font-family: var(--serif-display);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  color: var(--cream);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.gallery-subhead .sub-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(154,154,152,0.35), transparent);
+}
+
+/* Video gallery item */
+.gallery-item.video-item {
+  position: relative;
+  cursor: pointer;
+}
+.gallery-item.video-item .video-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.gallery-item.video-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: contrast(1.04) brightness(0.96);
+}
+.gallery-item.video-item .play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(10,6,6,0.30) 0%, rgba(42,5,5,0.50) 100%);
+  transition: background 0.3s;
+}
+.gallery-item.video-item:hover .play-overlay {
+  background: linear-gradient(135deg, rgba(10,6,6,0.15) 0%, rgba(42,5,5,0.30) 100%);
+}
+.gallery-item.video-item .play-icon {
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(200,197,189,0.75);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139,26,26,0.55);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 24px rgba(139,26,26,0.45);
+  transition: transform 0.3s, background 0.3s;
+}
+.gallery-item.video-item:hover .play-icon {
+  transform: scale(1.08);
+  background: rgba(139,26,26,0.75);
+}
+.gallery-item.video-item .play-icon svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+}
+
+/* Video lightbox */
+#video-lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,6,6,0.96);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 40px;
+}
+#video-lightbox-overlay video {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid rgba(154,154,152,0.50);
+  box-shadow: 0 0 0 1px rgba(154,154,152,0.22), 0 40px 100px -20px rgba(0,0,0,0.9);
+}
+
 /* Footer */
 .encyc-footer {
   text-align: center;
@@ -820,15 +924,66 @@ body::after {
         <div class="section-title">Visual Record</div>
         <div class="section-sub">Thalyne across registers.</div>
       </div>
+
+      <div class="gallery-subhead">
+        <span class="sub-num">i.</span>
+        <span class="sub-title">Combat</span>
+        <span class="sub-line"></span>
+      </div>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="Thalyne_Martial_Combat.PNG" alt="Thalyne Martial — Combat">
-          <div class="gallery-label">Combat</div>
+          <div class="gallery-label">Battlefield</div>
           <div class="gallery-caption">Faction III · Spear and Strike</div>
         </div>
+      </div>
+
+      <div class="gallery-subhead">
+        <span class="sub-num">ii.</span>
+        <span class="sub-title">Competition</span>
+        <span class="sub-line"></span>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item video-item" id="thalyne-fight-video">
+          <div class="video-thumb">
+            <video muted preload="metadata" playsinline>
+              <source src="Thalyne_Martial_Competition_Video.mp4#t=0.1" type="video/mp4">
+            </video>
+            <div class="play-overlay">
+              <div class="play-icon">
+                <svg viewBox="0 0 24 24" fill="#f4ecdc"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-label">Fight Footage</div>
+          <div class="gallery-caption">Sanctioned bout · cage</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Thalyne_Martial_Competition_2.jpg" alt="Thalyne Martial — Cage Stance">
+          <div class="gallery-label">In the Cage</div>
+          <div class="gallery-caption">Guard up · crimson and black</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Thalyne_Martial_Competition_3.jpg" alt="Thalyne Martial — Between Rounds">
+          <div class="gallery-label">Between Rounds</div>
+          <div class="gallery-caption">Breath returning · sweat on the skin</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Thalyne_Martial_Athletic.png" alt="Thalyne Martial — Training">
+          <div class="gallery-label">Training</div>
+          <div class="gallery-caption">Between fights · the work that pays the win</div>
+        </div>
+      </div>
+
+      <div class="gallery-subhead">
+        <span class="sub-num">iii.</span>
+        <span class="sub-title">Nightlife</span>
+        <span class="sub-line"></span>
+      </div>
+      <div class="gallery-grid">
         <div class="gallery-item">
           <img src="Thalyne_Martial_Nightlife.PNG" alt="Thalyne Martial — Nightlife">
-          <div class="gallery-label">Nightlife</div>
+          <div class="gallery-label">Off the Mat</div>
           <div class="gallery-caption">The Rebirth Celebration</div>
         </div>
       </div>
@@ -859,10 +1014,19 @@ body::after {
 <div id="lightbox-overlay" style="display:none; position:fixed; inset:0; background:rgba(10,6,6,0.95); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; padding:40px;">
   <img id="lightbox-img" style="max-width:100%; max-height:100%; border:1px solid rgba(154,154,152,0.50); box-shadow:0 0 0 1px rgba(154,154,152,0.22), 0 40px 100px -20px rgba(0,0,0,0.9);">
 </div>
+
+<div id="video-lightbox-overlay">
+  <video id="video-lightbox-player" controls playsinline></video>
+</div>
+
 <script>
   (function() {
-    var overlay = document.getElementById('lightbox-overlay');
+    var imgOverlay = document.getElementById('lightbox-overlay');
     var lightboxImg = document.getElementById('lightbox-img');
+    var videoOverlay = document.getElementById('video-lightbox-overlay');
+    var videoPlayer = document.getElementById('video-lightbox-player');
+
+    // Image lightbox — exclude lightbox img itself and the video thumbnail
     document.querySelectorAll('img').forEach(function(img) {
       if (img.id === 'lightbox-img') return;
       img.style.cursor = 'zoom-in';
@@ -870,12 +1034,45 @@ body::after {
         e.preventDefault();
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
-        overlay.style.display = 'flex';
+        imgOverlay.style.display = 'flex';
       });
     });
-    overlay.addEventListener('click', function() { overlay.style.display = 'none'; });
+    imgOverlay.addEventListener('click', function() { imgOverlay.style.display = 'none'; });
+
+    // Video lightbox
+    var videoItem = document.getElementById('thalyne-fight-video');
+    if (videoItem) {
+      videoItem.addEventListener('click', function(e) {
+        e.preventDefault();
+        var source = videoItem.querySelector('source');
+        if (source) {
+          // Strip the #t fragment for full playback in lightbox
+          var src = source.getAttribute('src').split('#')[0];
+          videoPlayer.src = src;
+          videoOverlay.style.display = 'flex';
+          videoPlayer.play().catch(function() {});
+        }
+      });
+    }
+    videoOverlay.addEventListener('click', function(e) {
+      if (e.target === videoOverlay) {
+        videoPlayer.pause();
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+        videoOverlay.style.display = 'none';
+      }
+    });
+
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') overlay.style.display = 'none';
+      if (e.key === 'Escape') {
+        imgOverlay.style.display = 'none';
+        if (videoOverlay.style.display === 'flex') {
+          videoPlayer.pause();
+          videoPlayer.removeAttribute('src');
+          videoPlayer.load();
+          videoOverlay.style.display = 'none';
+        }
+      }
     });
   })();
 </script>
