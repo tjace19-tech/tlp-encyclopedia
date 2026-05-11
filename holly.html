@@ -70,6 +70,12 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .gallery-caption{margin-top:10px;}
 .gallery-caption .label{font-family:var(--serif-display);font-size:9px;letter-spacing:.3em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:4px;}
 .gallery-caption .desc{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);line-height:1.4;}
+.gallery-subsection{margin:36px 0 18px;display:flex;align-items:baseline;gap:14px;}
+.gallery-subsection:first-child{margin-top:0;}
+.gallery-subsection .sub-num{font-family:var(--serif-display);font-size:10px;letter-spacing:.32em;color:var(--gold-deep);text-transform:uppercase;font-weight:500;}
+.gallery-subsection .sub-title{font-family:var(--serif-display);font-size:14px;letter-spacing:.22em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;}
+.gallery-subsection .sub-rule{flex:1;height:1px;background:linear-gradient(90deg,rgba(201,164,73,.42),transparent);}
+.gallery-subsection .sub-note{font-family:var(--serif-italic);font-style:italic;font-size:13px;color:var(--cream-dim);}
 .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
 .rel-card{border:1px solid rgba(201,164,73,.28);background:linear-gradient(135deg,rgba(30,58,138,.14) 0%,rgba(14,26,58,.45) 100%);padding:24px 22px;}
 .rel-name{font-family:var(--serif-display);font-size:13px;letter-spacing:.18em;color:var(--cream);text-transform:uppercase;font-weight:600;margin-bottom:4px;}
@@ -100,7 +106,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
       <a href="maia.html" class="sidebar-member"><span class="sidebar-member-name">Maia Galmir</span><span class="sidebar-member-meta"><span class="age">327</span><span>Matriarch · Sole Head of House</span></span></a>
       <a href="david-vendrith.html" class="sidebar-member"><span class="sidebar-member-name">David Vendrith</span><span class="sidebar-member-meta"><span class="age">242</span><span>Consort · Grandholm</span></span></a>
       <a href="maini.html" class="sidebar-member"><span class="sidebar-member-name">Maini Galmir</span><span class="sidebar-member-meta"><span class="age">87</span><span>Eldest Daughter · Dardena</span></span></a>
-      <a href="lyle-helsird.html" class="sidebar-member"><span class="sidebar-member-name">Lyle Helsird</span><span class="sidebar-member-meta"><span class="age">81</span><span>Maini's Husband · Dardena</span></span></a>
+      <a href="lyle-helsird.html" class="sidebar-member"><span class="sidebar-member-name">Lyle Helsird</span><span class="sidebar-member-meta"><span class="age">—</span><span>Maini's Husband · Dardena</span></span></a>
       <a href="dixie.html" class="sidebar-member"><span class="sidebar-member-name">Dixenthra Vendrith</span><span class="sidebar-member-meta"><span class="age">86</span><span>Daughter · The Legion</span></span></a>
       <a href="claudia.html" class="sidebar-member"><span class="sidebar-member-name">Claudia Galmir</span><span class="sidebar-member-meta"><span class="age">42</span><span>Daughter · Astravar Reach</span></span></a>
       <a href="margaret.html" class="sidebar-member"><span class="sidebar-member-name">Margaret Vendrith</span><span class="sidebar-member-meta"><span class="age">39</span><span>Daughter · Martinhal</span></span></a>
@@ -211,34 +217,180 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 
     <section>
       <div class="section-head"><span class="section-num">VI.</span><div class="section-title">The Gallery</div></div>
+
+      <div class="gallery-subsection"><span class="sub-num">A.</span><span class="sub-title">Solo · Formal</span><span class="sub-rule"></span><span class="sub-note">The public register at full volume.</span></div>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="Holly_Formal_1.JPG" alt="Holly Galmir — formal">
-          <div class="gallery-caption"><div class="label">The Red Carpet</div><div class="desc">Global Diamond Foundation Gala. The public register at its peak. <em>Holly in her element — the cameras are the point, and she is not tolerating them.</em></div></div>
+          <img src="Holly_Formal_1.JPG" alt="Holly Galmir — formal, gala">
+          <div class="gallery-caption"><div class="label">The Red Carpet</div><div class="desc">Global Diamond Foundation Gala. The public register at its peak. <em>The cameras are the point, and she is not tolerating them.</em></div></div>
         </div>
         <div class="gallery-item">
-          <img src="Holly_Casual.PNG" alt="Holly Galmir — casual">
-          <div class="gallery-caption"><div class="label">Casual</div><div class="desc">White satin blouse, royal blue pleated skirt, blue heels. Even off-duty, full house palette. <em>The colors are not ceremonial. They are identity.</em></div></div>
+          <img src="Holly_Galmir_Formal.jpg" alt="Holly Galmir — formal, blue gown with bolero">
+          <div class="gallery-caption"><div class="label">Court Formal · The Bolero</div><div class="desc">Royal blue satin gown with gold filigree, cream bolero with matching embroidery, sapphire and gold choker. <em>The full house palette assembled into a single silhouette.</em></div></div>
         </div>
         <div class="gallery-item">
-          <img src="Holly_Athletic.PNG" alt="Holly Galmir — athletic">
-          <div class="gallery-caption"><div class="label">Athletic</div><div class="desc">High ponytail. House-color crop top and leggings with the Galmir monogram. Gold bracelet. <em>Polished even in workout clothes — performance-ready in every context.</em></div></div>
+          <img src="Holly_Galmir_Formal_2.jpg" alt="Holly Galmir — formal, structured cocktail">
+          <div class="gallery-caption"><div class="label">Solo · Cocktail Floor</div><div class="desc">A nightclub setting at full standing height. Structured blue and gold paneled dress, gold belt chain. <em>Composed, controlled, watchful — the version of her that exists when no one is looking.</em></div></div>
         </div>
         <div class="gallery-item">
-          <img src="Holly_Nightlife.PNG" alt="Holly Galmir — nightlife">
-          <div class="gallery-caption"><div class="label">Nightlife · Solo</div><div class="desc">The nightlife venue that is her territory. Royal blue and gold embroidered fitted dress. Composed and watchful — the private register when alone.</div></div>
+          <img src="Holly_Galmir_Formal_3.jpg" alt="Holly Galmir — formal, off-shoulder gown">
+          <div class="gallery-caption"><div class="label">Ballroom · Off-Shoulder</div><div class="desc">Off-shoulder royal blue satin with gold-leaf embroidery cascading down the skirt. Hair down. <em>The classical Galmir ballroom register — softness over structure, never the other way around.</em></div></div>
         </div>
+      </div>
+
+      <div class="gallery-subsection"><span class="sub-num">B.</span><span class="sub-title">Solo · Nightlife</span><span class="sub-rule"></span><span class="sub-note">Her territory.</span></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Holly_Nightlife.PNG" alt="Holly Galmir — nightlife, fitted dress">
+          <div class="gallery-caption"><div class="label">Nightlife · Established Venue</div><div class="desc">The original nightlife reference. Royal blue and gold embroidered fitted dress. <em>The private register when alone — composed and watchful.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Nightlife.jpg" alt="Holly Galmir — nightlife, diamond paneled">
+          <div class="gallery-caption"><div class="label">Nightlife · Diamond Paneled</div><div class="desc">Diamond-patterned royal blue and gold embroidered dress with gold chain belt. Pink and blue neon behind her. <em>Public-eye-as-territory rendered in a single still.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Nightlife_2.jpg" alt="Holly Galmir — nightlife, blue/white panel">
+          <div class="gallery-caption"><div class="label">Nightlife · Blue & White</div><div class="desc">Blue and white paneled dress with gold filigree, slit hem. Crowd blurred behind her on the dance floor.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Nightlife_3.jpg" alt="Holly Galmir — nightlife, lace mini">
+          <div class="gallery-caption"><div class="label">Nightlife · Cocktail Mini</div><div class="desc">Royal blue and gold brocade mini with white lace inset, gold chain layers, blue stiletto. <em>The dominant social register, scaled down to a single room.</em></div></div>
+        </div>
+      </div>
+
+      <div class="gallery-subsection"><span class="sub-num">C.</span><span class="sub-title">Solo · Business</span><span class="sub-rule"></span><span class="sub-note">The Vendrith machine, made wearable.</span></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Business.jpg" alt="Holly Galmir — business, blue blazer">
+          <div class="gallery-caption"><div class="label">Business · The Blazer</div><div class="desc">Royal blue blazer with white piping, cream silk blouse, cream trousers. Layered gold chains, statement earrings. <em>Maia's politics, translated into a single working silhouette.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Business_2.jpg" alt="Holly Galmir — business, silk blouse">
+          <div class="gallery-caption"><div class="label">Business · The Silk</div><div class="desc">Royal blue silk blouse with gold embroidered collar and cuffs, cream trousers, layered gold. <em>The version that does not announce itself in the room — it has already been heard.</em></div></div>
+        </div>
+      </div>
+
+      <div class="gallery-subsection"><span class="sub-num">D.</span><span class="sub-title">Solo · Casual</span><span class="sub-rule"></span><span class="sub-note">Off-duty, never off-house.</span></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Holly_Casual.PNG" alt="Holly Galmir — casual, blouse and skirt">
+          <div class="gallery-caption"><div class="label">Casual</div><div class="desc">White satin blouse, royal blue pleated skirt with gold embroidery, sapphire jewelry. <em>The colors are not ceremonial. They are identity.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Cocktail.jpg" alt="Holly Galmir — casual cocktail">
+          <div class="gallery-caption"><div class="label">Cocktail · Day Register</div><div class="desc">Cream silk blouse, royal blue pleated mini skirt with gold filigree, sapphire pendant and earrings. <em>The same outfit's evening cousin — quieter, more poised.</em></div></div>
+        </div>
+      </div>
+
+      <div class="gallery-subsection"><span class="sub-num">E.</span><span class="sub-title">Solo · Athletic</span><span class="sub-rule"></span><span class="sub-note">Polished even in workout clothes.</span></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Holly_Athletic.PNG" alt="Holly Galmir — athletic, monogram set">
+          <div class="gallery-caption"><div class="label">Athletic · The Monogram</div><div class="desc">High ponytail. House-color crop top and leggings with the Galmir monogram. Gold bracelet. <em>Performance-ready in every context.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Athletic.jpg" alt="Holly Galmir — athletic, hoodie set">
+          <div class="gallery-caption"><div class="label">Athletic · The Warm-Up</div><div class="desc">Royal blue hoodie with gold ornamental monogram, matching leggings with gold-and-white side stripe. Modern city gym behind her. <em>House colors held even in fleece.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Tennis_Dress.jpg" alt="Holly Galmir — tennis, white skirt and blue top">
+          <div class="gallery-caption"><div class="label">Tennis · Centre Court</div><div class="desc">White pleated skirt with gold trim, blue and white V-neck top, gold hoops, racquet in hand. <em>Tennis as a high-society performance, not a sport.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Tennis_Dress_2.jpg" alt="Holly Galmir — tennis, bun">
+          <div class="gallery-caption"><div class="label">Tennis · Tournament</div><div class="desc">Same dress. Hair pulled into a tight high bun for play. <em>The composure does not break for sweat.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Tennis_Dress_3.jpg" alt="Holly Galmir — tennis, blue polo dress">
+          <div class="gallery-caption"><div class="label">Tennis · Royal Blue</div><div class="desc">Royal blue polo dress with white collar and gold trim, gold bracelet stack. <em>The full-house-color variant of the same silhouette.</em></div></div>
+        </div>
+      </div>
+
+      <div class="gallery-subsection"><span class="sub-num">F.</span><span class="sub-title">Solo · Private</span><span class="sub-rule"></span><span class="sub-note">The least public version of her — still in the colors.</span></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Pajamas.jpg" alt="Holly Galmir — pajamas, silk">
+          <div class="gallery-caption"><div class="label">Pajamas · Silk</div><div class="desc">Royal blue silk pajamas with gold filigree at collar, cuffs, and pocket. Cream silk pillows behind her. <em>Even asleep, in the colors. The point of the rule.</em></div></div>
+        </div>
+      </div>
+
+      <div class="gallery-subsection"><span class="sub-num">G.</span><span class="sub-title">With Lessio · Engagement Era</span><span class="sub-rule"></span><span class="sub-note">Sixteen. The building-toward-him work, in motion.</span></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio-16_Casual.jpg" alt="Holly and Lessio-16 — bench, night sky">
+          <div class="gallery-caption"><div class="label">Quiet · Night Bench</div><div class="desc">Stargazing bench, distant city. Cream knit sweater, his grey hoodie, her arm around his shoulders. <em>A constructed soft moment — and one of the few in which his face is genuinely at ease.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio-16_Formal.jpg" alt="Holly and Lessio-16 — ballroom, adjusting">
+          <div class="gallery-caption"><div class="label">Early Formal · The Adjustment</div><div class="desc">Ballroom event. Holly in dark navy and gold; teen Lessio in a white open-collar shirt. Her hand on his head, both smiling. <em>The physical-constancy approach, in its softest form.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Lessio-16_Holly_Galmir_Formal.jpg" alt="Lessio-16 and Holly — red carpet, paparazzi">
+          <div class="gallery-caption"><div class="label">Red Carpet · Sixteen</div><div class="desc">Lessio in imperial purple with gold embroidery and gold bow tie; Holly in royal blue and gold. <em>Crown colors on his person, her colors on hers — they present as a matched pair.</em> His expression carries everything she thrives on.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Lessio-16_Holly_Galmir_Formal_2.jpg" alt="Lessio-16 and Holly — red carpet, walking">
+          <div class="gallery-caption"><div class="label">Red Carpet · The Asymmetry</div><div class="desc">Holly smiling outward; Lessio's jaw tight. <em>The structural tension in a single frame — she is most alive in exactly the space that costs him most.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio-16_Athletic.jpg" alt="Holly and Lessio-16 — gym, kettlebell">
+          <div class="gallery-caption"><div class="label">Gym · Kettlebell</div><div class="desc">Holly in blue and gold sports set, kettlebell swing. Lessio in a white tee, watching with a water bottle. <em>Even the gym is shared territory.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio-16_Athletic_2.jpg" alt="Holly and Lessio-16 — gym, overhead press">
+          <div class="gallery-caption"><div class="label">Gym · Overhead</div><div class="desc">Royal blue sports bra, white leggings, overhead bar press. Lessio in royal blue shorts beside her — house-color signal traded between them.</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio-16_Boxing.jpg" alt="Holly and Lessio-16 — sparring, black gloves">
+          <div class="gallery-caption"><div class="label">Ring · The Sparring</div><div class="desc">A sparring ring. Holly throwing a jab. Lessio ringside, watching. <em>Combat-specific gear — the only context in which the house colors yield to the work.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio-16_Boxing_2.jpg" alt="Holly and Lessio-16 — sparring, red gloves">
+          <div class="gallery-caption"><div class="label">Ring · The Watch</div><div class="desc">Same exchange, red gloves. Lessio's expression lighter — closer to a smile. <em>One of the few unguarded moments captured of him in this era.</em></div></div>
+        </div>
+      </div>
+
+      <div class="gallery-subsection"><span class="sub-num">H.</span><span class="sub-title">With Lessio · Married Era</span><span class="sub-rule"></span><span class="sub-note">After the arrangement settles into a life.</span></div>
+      <div class="gallery-grid">
         <div class="gallery-item">
           <img src="Holly_Lessio_Nightlife_Pose.PNG" alt="Holly and Lessio — nightlife pose">
-          <div class="gallery-caption"><div class="label">With Lessio · Pose</div><div class="desc">Both smiling. Lessio relaxed — genuinely present, not enduring. Hand at her waist. Her hand on his chest. <em>The warmer, later register of their dynamic.</em></div></div>
+          <div class="gallery-caption"><div class="label">Nightlife · Pose</div><div class="desc">Both smiling. Lessio relaxed — genuinely present, not enduring. Hand at her waist. Her hand on his chest. <em>The warmer, later register of their dynamic.</em></div></div>
         </div>
         <div class="gallery-item">
           <img src="Holly_Lessio_Nightlife_Kiss.PNG" alt="Holly and Lessio — nightlife kiss">
-          <div class="gallery-caption"><div class="label">With Lessio · Kiss</div><div class="desc">She kisses his cheek. He is still smiling, eyes open, at ease. The one context where something genuinely lighter appears on her face — the public eye combined with him beside her.</div></div>
+          <div class="gallery-caption"><div class="label">Nightlife · The Kiss</div><div class="desc">She kisses his cheek. He is still smiling, eyes open, at ease. <em>The one context where something genuinely lighter appears on her face — the public eye combined with him beside her.</em></div></div>
         </div>
         <div class="gallery-item">
+          <img src="Lessio_Holly_Galmir_Casual_2.jpg" alt="Lessio and Holly — gym coaching">
+          <div class="gallery-caption"><div class="label">Gym · The Spotter</div><div class="desc">Adult Lessio on the bench, bicep curl. Holly leaning in, hand on his shoulder, smiling broadly. <em>The married-era version of the same arrangement — closer, easier, still hers.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio_Adult_Athletic.jpg" alt="Holly and adult Lessio — gym, athletic">
+          <div class="gallery-caption"><div class="label">Gym · Adult</div><div class="desc">Royal blue and gold athletic set, cleavage cutout, adult Lessio mid-curl beside her. Her hand on his shoulder, leaning in. <em>The dynamic the engagement was building toward.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio_Adult_Comfy.jpg" alt="Holly and adult Lessio — sitting room, comfy">
+          <div class="gallery-caption"><div class="label">Comfy · The Sitting Room</div><div class="desc">Ornate gold-framed sitting room. Holly in royal blue and gold hoodie, perched on the couch arm; Lessio in imperial purple with white and gold filigree. <em>Matched-pair colors, even in fleece.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio_Adult_Formal.jpg" alt="Holly and adult Lessio — modern marble suite">
+          <div class="gallery-caption"><div class="label">Comfy · Modern Suite</div><div class="desc">A marble and chandelier suite at altitude. Holly adjusting his hoodie drawstrings. <em>The physical-constancy canon, settled into rhythm.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio_Adult_Formal_2.jpg" alt="Holly and adult Lessio — palace formal">
+          <div class="gallery-caption"><div class="label">Royal Formal · Palace</div><div class="desc">Blue and gold gown; Lessio in imperial purple with gold filigree. Hand-on-hip, his hand at his collar. <em>The official portrait register of their pairing.</em></div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Holly_Galmir_Lessio_Adult_Formal_3.jpg" alt="Holly and adult Lessio — rooftop restaurant">
+          <div class="gallery-caption"><div class="label">Royal Formal · Rooftop</div><div class="desc">A skyline restaurant at night. Velvet imperial purple on him, embroidered blue on her. Her hand resting on his folded arms. <em>Quietly possessive, quietly his.</em></div></div>
+        </div>
+      </div>
+
+      <div class="gallery-subsection"><span class="sub-num">I.</span><span class="sub-title">With Family</span><span class="sub-rule"></span><span class="sub-note">Rival. Daughter.</span></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
           <img src="Holly_Myrella_Staredown.PNG" alt="Holly and Myrella — gym staredown">
-          <div class="gallery-caption"><div class="label">With Myrella · Staredown</div><div class="desc">Same gym. Same height. Neither backing down. Two relationships to power and identity in one frame — Holly polished, Myrella functional; Holly's Galmir monogram versus Myrella's Wings of Myrient.</div></div>
+          <div class="gallery-caption"><div class="label">With Myrella · Staredown</div><div class="desc">Same gym. Same height. Neither backing down. Two relationships to power and identity in one frame — Holly polished, Myrella functional; <em>Galmir monogram versus Wings of Myrient.</em></div></div>
         </div>
         <div class="gallery-item">
           <img src="Holly_Galmir_Maitee_Galmir.PNG" alt="Holly with future daughter Maitee">
