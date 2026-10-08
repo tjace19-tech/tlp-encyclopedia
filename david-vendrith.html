@@ -86,6 +86,10 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .footer-text .meta{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;margin-top:4px;}
 .mobile-back{display:none;}
 @media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}.mobile-back{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(201,164,73,.25);transition:color .2s;}.mobile-back:hover{color:var(--gold-bright);}.chrome{padding-top:14px;}}
+
+.gallery-grid{align-items:start}
+.gallery-item.wide{grid-column:span 2}
+@media(max-width:560px){.gallery-item.wide{grid-column:span 1}}
 </style>
 </head>
 <body>
@@ -136,7 +140,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         <div class="epigraph">Maia's husband by formal marriage. The second half of the alternating Galmir/Vendrith naming convention through which the family’s daughters carry House Vendrith. A quiet presence in a loud household — politically aligned with Maia, never managed by her, and the closest thing to a peer his grandson Doxin has on this branch.</div>
       </div>
       <div>
-        <div class="hero-portrait"><img src="David_Vendrith_Casual.PNG" alt="David Vendrith"></div>
+        <div class="hero-portrait"><img src="David_Vendrith_Casual_01.jpg" alt="David Vendrith"></div>
       </div>
     </div>
 
@@ -206,14 +210,15 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <section>
       <div class="section-head"><span class="section-num">VI.</span><div class="section-title">The Gallery</div></div>
       <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="David_Vendrith_Casual.PNG" alt="David Vendrith — casual">
+        <div class="gallery-item wide">
+          <img src="David_Vendrith_Casual_01.jpg" alt="David Vendrith — casual">
           <div class="gallery-caption"><div class="label">Casual</div><div class="desc">White linen with fine gold-thread embroidery down the plackets. Royal blue trousers. Brown leather belt. A gold chain at the collarbone. A leather-bound book in his hand. <em>The pastoral grounds of Grandholm at sunset — his preferred register and his preferred time of day.</em></div></div>
         </div>
-        <div class="gallery-item">
-          <img src="David_Vendrith_Battle.PNG" alt="David Vendrith — battle">
+        <div class="gallery-item wide">
+          <img src="David_Vendrith_Battle_01.jpg" alt="David Vendrith — battle">
           <div class="gallery-caption"><div class="label">Battle</div><div class="desc">Bronze cuirass with gold-and-white pteruges. Plumed helmet held in his right hand. Same gold chain at the collarbone — the constant. <em>The combat register of a man who trained in his youth, served when his service was called for, and has neither lost the conditioning nor pretended to need it on a daily basis.</em></div></div>
         </div>
+              <div class="gallery-item"><img src="David_Vendrith_-_Promo_Poster.jpg" alt="David Vendrith — Promo Poster" loading="lazy"><div class="gallery-caption"><div class="label">Promo Poster</div></div></div>
       </div>
     </section>
 
