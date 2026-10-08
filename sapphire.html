@@ -83,6 +83,10 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
 .footer-text .meta { display: block; font-family: var(--serif-display); font-size: 10px; letter-spacing: 0.3em; color: var(--gold-deep); text-transform: uppercase; margin-top: 4px; }
 .mobile-back { display: none; }
 @media (max-width: 900px) { .sidebar { display: none; } .main { padding: 0 20px 60px; } .hero { grid-template-columns: 1fr; gap: 30px; } .vitals { grid-template-columns: repeat(2, 1fr); } .mobile-back { display: block; font-family: var(--serif-display); font-size: 10px; letter-spacing: .3em; color: var(--gold-deep); text-transform: uppercase; text-decoration: none; padding: 14px 0; border-bottom: 1px solid rgba(201,164,73,.18); transition: color .2s; } .mobile-back:hover { color: var(--gold); } .chrome { padding-top: 14px; } }
+
+.gallery-grid{align-items:start}
+.gallery-item.wide{grid-column:span 2}
+@media(max-width:560px){.gallery-item.wide{grid-column:span 1}}
 </style>
 </head>
 <body>
@@ -172,7 +176,7 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Battle · 02</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Sapphire_Toraiyo_Night_01.jpg" alt="Sapphire Toraiyo — Night · 01" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Night · 01</div>

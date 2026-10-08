@@ -88,6 +88,10 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .footer-text .meta{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;margin-top:4px;}
 .mobile-back{display:none;}
 @media(max-width:900px){.sidebar{display:none;}.main{padding:0 20px 60px;}.hero{grid-template-columns:1fr;gap:30px;}.vitals{grid-template-columns:repeat(2,1fr);}.mobile-back{display:block;font-family:var(--serif-display);font-size:10px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(201,164,73,.18);transition:color .2s;}.mobile-back:hover{color:var(--gold);}.chrome{padding-top:14px;}}
+
+.gallery-grid{align-items:start}
+.gallery-item.wide{grid-column:span 2}
+@media(max-width:560px){.gallery-item.wide{grid-column:span 1}}
 </style>
 </head>
 <body>
@@ -179,34 +183,28 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
             <div class="label">Promo Poster</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Aurea-Lee_Locsird_Casual_01.jpg" alt="Aurea-Lee Locsird — Casual · 01" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Casual · 01</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Aurea-Lee_Locsird_Casual_02.jpg" alt="Aurea-Lee Locsird — Casual · 02" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Casual · 02</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Aurea-Lee_Locsird_Casual_03.jpg" alt="Aurea-Lee Locsird — Casual · 03" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Casual · 03</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Aurea-Lee_Locsird_Casual_04.jpg" alt="Aurea-Lee Locsird — Casual · 04" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Casual · 04</div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="Aurea-Lee_Locsird_Casual_05.jpg" alt="Aurea-Lee Locsird — Casual · 05" loading="lazy">
-          <div class="gallery-caption">
-            <div class="label">Casual · 05</div>
           </div>
         </div>
         <div class="gallery-item">
@@ -240,30 +238,24 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
           </div>
         </div>
         <div class="gallery-item">
-          <img src="Aurea-Lee_Locsird_Memorial_01.jpg" alt="Aurea-Lee Locsird — Memorial" loading="lazy">
-          <div class="gallery-caption">
-            <div class="label">Memorial</div>
-          </div>
-        </div>
-        <div class="gallery-item">
           <img src="Baby_Aurea-Lee_Locsird_Balcony_01.jpg" alt="Aurea-Lee Locsird — Baby · Balcony" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Baby · Balcony</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Aurea-Lee_Locsird_Lessio_Locsird_Casual_01.jpg" alt="Aurea-Lee Locsird — With Lessio · Casual" loading="lazy">
           <div class="gallery-caption">
             <div class="label">With Lessio · Casual</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Aurea-Lee_Locsird_Lessio_Locsird_Classy_01.jpg" alt="Aurea-Lee Locsird — With Lessio · Classy" loading="lazy">
           <div class="gallery-caption">
             <div class="label">With Lessio · Classy</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Lessio_16_Aurea-Lee_Locsird_Studying_01.jpg" alt="Aurea-Lee Locsird — With Lessio · Studying" loading="lazy">
           <div class="gallery-caption">
             <div class="label">With Lessio · Studying</div>

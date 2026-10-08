@@ -82,6 +82,10 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
 .footer-text .meta { display: block; font-family: var(--serif-display); font-size: 10px; letter-spacing: 0.3em; color: var(--gold-deep); text-transform: uppercase; margin-top: 4px; }
 .mobile-back { display: none; }
 @media (max-width: 900px) { .sidebar { display: none; } .main { padding: 0 20px 60px; } .hero { grid-template-columns: 1fr; gap: 30px; } .vitals { grid-template-columns: repeat(2, 1fr); } .mobile-back { display: block; font-family: var(--serif-display); font-size: 10px; letter-spacing: .3em; color: var(--gold-deep); text-transform: uppercase; text-decoration: none; padding: 14px 0; border-bottom: 1px solid rgba(201,164,73,.18); transition: color .2s; } .mobile-back:hover { color: var(--gold); } .chrome { padding-top: 14px; } }
+
+.gallery-grid{align-items:start}
+.gallery-item.wide{grid-column:span 2}
+@media(max-width:560px){.gallery-item.wide{grid-column:span 1}}
 </style>
 </head>
 <body>
@@ -171,19 +175,19 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Poster · Current Dueling Champion</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Battle_01.jpg" alt="Samantha-Lilly Toraiyo — Battle · 01" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 01</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Battle_009.jpg" alt="Samantha-Lilly Toraiyo — Battle · 009" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 009</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Battle_03.jpg" alt="Samantha-Lilly Toraiyo — Battle · 03" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 03</div>
@@ -195,46 +199,28 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Battle · 04</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Battle_077.jpg" alt="Samantha-Lilly Toraiyo — Battle · 077" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 077</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Battle_082.jpg" alt="Samantha-Lilly Toraiyo — Battle · 082" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 082</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Battle_089.jpg" alt="Samantha-Lilly Toraiyo — Battle · 089" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 089</div>
           </div>
         </div>
-        <div class="gallery-item">
-          <img src="Samantha-Lilly_Toraiyo_Battle_092.jpg" alt="Samantha-Lilly Toraiyo — Battle · 092" loading="lazy">
-          <div class="gallery-caption">
-            <div class="label">Battle · 092</div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="Samantha-Lilly_Toraiyo_Battle_098.jpg" alt="Samantha-Lilly Toraiyo — Battle · 098" loading="lazy">
-          <div class="gallery-caption">
-            <div class="label">Battle · 098</div>
-          </div>
-        </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Battle_114.jpg" alt="Samantha-Lilly Toraiyo — Battle · 114" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 114</div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="Samantha-Lilly_Toraiyo_Battle_155.jpg" alt="Samantha-Lilly Toraiyo — Battle · 155" loading="lazy">
-          <div class="gallery-caption">
-            <div class="label">Battle · 155</div>
           </div>
         </div>
         <div class="gallery-item">
@@ -249,13 +235,13 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Casual · 01</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Casual_033.jpg" alt="Samantha-Lilly Toraiyo — Casual · 033" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Casual · 033</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Casual_034.jpg" alt="Samantha-Lilly Toraiyo — Casual · 034" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Casual · 034</div>
@@ -273,64 +259,46 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Formal · 01</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Formal_067.jpg" alt="Samantha-Lilly Toraiyo — Formal · 067" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Formal · 067</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Formal_085.jpg" alt="Samantha-Lilly Toraiyo — Formal · 085" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Formal · 085</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Formal_111.jpg" alt="Samantha-Lilly Toraiyo — Formal · 111" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Formal · 111</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Formal_152.jpg" alt="Samantha-Lilly Toraiyo — Formal · 152" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Formal · 152</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Council_173.jpg" alt="Samantha-Lilly Toraiyo — Council · 173" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Council · 173</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Council_178.jpg" alt="Samantha-Lilly Toraiyo — Council · 178" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Council · 178</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Terrace_023.jpg" alt="Samantha-Lilly Toraiyo — Terrace" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Terrace</div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="Samantha-Lilly_Toraiyo_Night_01.jpg" alt="Samantha-Lilly Toraiyo — Night · 01" loading="lazy">
-          <div class="gallery-caption">
-            <div class="label">Night · 01</div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="Samantha-Lilly_Toraiyo_Night_02.jpg" alt="Samantha-Lilly Toraiyo — Night · 02" loading="lazy">
-          <div class="gallery-caption">
-            <div class="label">Night · 02</div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="Samantha-Lilly_Toraiyo_Night_03.jpg" alt="Samantha-Lilly Toraiyo — Night · 03" loading="lazy">
-          <div class="gallery-caption">
-            <div class="label">Night · 03</div>
           </div>
         </div>
         <div class="gallery-item">
@@ -357,22 +325,70 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">With Lessio & Aurea-Lee · Walking</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Mez-Tah_Toraiyo_Training_059.jpg" alt="Samantha-Lilly Toraiyo — With Mez-Tah · Training 059" loading="lazy">
           <div class="gallery-caption">
             <div class="label">With Mez-Tah · Training 059</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Samantha-Lilly_Toraiyo_Lessio_16_Mez-Tah_Toraiyo_Training_101.jpg" alt="Samantha-Lilly Toraiyo — With Lessio & Mez-Tah · Training 101" loading="lazy">
           <div class="gallery-caption">
             <div class="label">With Lessio & Mez-Tah · Training 101</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Rhyca_Locsird_Samantha-Lilly_Toraiyo_SittingRoom_022.jpg" alt="Samantha-Lilly Toraiyo — With Rhyca · Sitting Room" loading="lazy">
           <div class="gallery-caption">
             <div class="label">With Rhyca · Sitting Room</div>
+          </div>
+        </div>
+              <div class="gallery-item wide">
+          <img src="Samantha-Lilly_Toraiyo_Training_02.jpg" alt="Samantha-Lilly Toraiyo — Training · 02" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">Training · 02</div>
+          </div>
+        </div>
+        <div class="gallery-item wide">
+          <img src="Samantha-Lilly_Toraiyo_Night_01.jpg" alt="Samantha-Lilly Toraiyo — Night · 01" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">Night · 01</div>
+          </div>
+        </div>
+        <div class="gallery-item wide">
+          <img src="Samantha-Lilly_Toraiyo_Night_03.jpg" alt="Samantha-Lilly Toraiyo — Night · 03" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">Night · 03</div>
+          </div>
+        </div>
+        <div class="gallery-item wide">
+          <img src="Samantha-Lilly_Toraiyo_Night_04.jpg" alt="Samantha-Lilly Toraiyo — Night · 04" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">Night · 04</div>
+          </div>
+        </div>
+        <div class="gallery-item wide">
+          <img src="Samantha-Lilly_Toraiyo_Night_05.jpg" alt="Samantha-Lilly Toraiyo — Night · 05" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">Night · 05</div>
+          </div>
+        </div>
+              <div class="gallery-item wide">
+          <img src="Lessio_Locsird_Samantha-Lilly_Toraiyo_Training_01.jpg" alt="Samantha-Lilly Toraiyo — With Lessio · Training 01" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">With Lessio · Training 01</div>
+          </div>
+        </div>
+        <div class="gallery-item wide">
+          <img src="Lessio_Locsird_Samantha-Lilly_Toraiyo_Training_02.jpg" alt="Samantha-Lilly Toraiyo — With Lessio · Training 02" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">With Lessio · Training 02</div>
+          </div>
+        </div>
+        <div class="gallery-item wide">
+          <img src="Lessio_Locsird_Samantha-Lilly_Toraiyo_Training_04.jpg" alt="Samantha-Lilly Toraiyo — With Lessio · Training 04" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">With Lessio · Training 04</div>
           </div>
         </div>
       </div>

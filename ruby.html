@@ -82,6 +82,10 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
 .footer-text .meta { display: block; font-family: var(--serif-display); font-size: 10px; letter-spacing: 0.3em; color: var(--gold-deep); text-transform: uppercase; margin-top: 4px; }
 .mobile-back { display: none; }
 @media (max-width: 900px) { .sidebar { display: none; } .main { padding: 0 20px 60px; } .hero { grid-template-columns: 1fr; gap: 30px; } .vitals { grid-template-columns: repeat(2, 1fr); } .mobile-back { display: block; font-family: var(--serif-display); font-size: 10px; letter-spacing: .3em; color: var(--gold-deep); text-transform: uppercase; text-decoration: none; padding: 14px 0; border-bottom: 1px solid rgba(201,164,73,.18); transition: color .2s; } .mobile-back:hover { color: var(--gold); } .chrome { padding-top: 14px; } }
+
+.gallery-grid{align-items:start}
+.gallery-item.wide{grid-column:span 2}
+@media(max-width:560px){.gallery-item.wide{grid-column:span 1}}
 </style>
 </head>
 <body>
@@ -165,7 +169,7 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Formal · 01</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Formal_02.jpg" alt="Ruby Toraiyo — Formal · 02" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Formal · 02</div>
@@ -183,31 +187,31 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Formal · 04</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Close_Up_01.jpg" alt="Ruby Toraiyo — Close-Up" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Close-Up</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Casual_01.jpg" alt="Ruby Toraiyo — Casual · 01" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Casual · 01</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Casual_02.jpg" alt="Ruby Toraiyo — Casual · 02" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Casual · 02</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Council_01.jpg" alt="Ruby Toraiyo — Council" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Council</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Battle_01.jpg" alt="Ruby Toraiyo — Battle · 01" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 01</div>
@@ -225,31 +229,31 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Battle · 03</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Battle_04.jpg" alt="Ruby Toraiyo — Battle · 04" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 04</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Battle_05.jpg" alt="Ruby Toraiyo — Battle · 05" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 05</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Battle_06.jpg" alt="Ruby Toraiyo — Battle · 06" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Battle · 06</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Night_01.jpg" alt="Ruby Toraiyo — Night · 01" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Night · 01</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Night_02.jpg" alt="Ruby Toraiyo — Night · 02" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Night · 02</div>
@@ -267,31 +271,31 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
             <div class="label">Night · 04</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Night_05.jpg" alt="Ruby Toraiyo — Night · 05" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Night · 05</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Night_06.jpg" alt="Ruby Toraiyo — Night · 06" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Night · 06</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Night_07.jpg" alt="Ruby Toraiyo — Night · 07" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Night · 07</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Ruby_Toraiyo_Night_08.jpg" alt="Ruby Toraiyo — Night · 08" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Night · 08</div>
           </div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item wide">
           <img src="Lessio_Locsird_Ruby_Toraiyo_Night_01.jpg" alt="Ruby Toraiyo — With Lessio · Night" loading="lazy">
           <div class="gallery-caption">
             <div class="label">With Lessio · Night</div>
@@ -325,6 +329,12 @@ body::after { content: ''; position: fixed; inset: 0; background-image: url("dat
           <img src="Sonya-Lee_Toraiyo_Ruby_Toraiyo_Faceoff_01.jpg" alt="Ruby Toraiyo — Faceoff · Sonya-Lee Toraiyo" loading="lazy">
           <div class="gallery-caption">
             <div class="label">Faceoff · Sonya-Lee Toraiyo</div>
+          </div>
+        </div>
+              <div class="gallery-item wide">
+          <img src="Ruby_Toraiyo_Battle_155.jpg" alt="Ruby Toraiyo — Battle · 155" loading="lazy">
+          <div class="gallery-caption">
+            <div class="label">Battle · 155</div>
           </div>
         </div>
       </div>
